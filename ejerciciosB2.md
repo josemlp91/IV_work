@@ -1,4 +1,3 @@
-
 ### Ejercicio 7
 
 1. Crear diferentes grupos de control sobre un sistema operativo Linux. 
@@ -43,7 +42,16 @@ ls -l/sys/fs/cgroup/cpuacct/ejer7IV
 ------------------------------------------------
 **Ejecucion en el siguiente enlace:**
 
-<http://showterm.io/157548a7f7c01102254f3#fast>
+Paso 1:
+<http://showterm.io/290927702e253143ef3c0#fast>
+
+Paso 2:
+<http://showterm.io/8b826266caa48b5a66bd1#fast>
+
+
+Paso 3:
+
+
 
 
 
