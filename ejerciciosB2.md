@@ -66,3 +66,8 @@ Paso 3:
 
 2 .Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización.
 Añadir los costes eléctricos correspondientes.
+
+### Ejercicio 8
+___Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.___
+
+
