@@ -70,4 +70,15 @@ Añadir los costes eléctricos correspondientes.
 ### Ejercicio 8
 ___Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.___
 
+>> Mi idea es hacer una aproximación de los recursos de un dispositivo con recursos limitados, (como un smartphone),
+un ejemplo seria que estamos desarrollando una aplicación web responsive, destina a una empresa 
+donde sabemos que el 70% de los empleados que la van a usar, van interactuar con ella desde sus smartphones, 
+(con una cpu y una ram muy por debajo de las maquinas del entorno de producción), podemos tomar la decisión de limitar el entorno de producción
+para que se adapte mejor, y ahorrar costes al tener solo los recursos justos a lo que se nos requiere.
+
+>>Otra idea que se me ocurre, es limitar los recursos para tener una reserva,
+para situaciones donde sabemos que se va a requerir de más recursos. Un ejemplo el servidor de "una tienda virtual"
+donde sabemos que en verano se usa muy poco, podemos disminuir el porcentaje de CPU y la RAM,
+y en la época de navidad hacer una asignacion de recursos máxima.
+
 
