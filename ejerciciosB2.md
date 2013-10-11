@@ -52,7 +52,7 @@ Paso 2:
 Paso 3:
 <http://showterm.io/9d4def54f06cd45b49c70#fast>
 
-*** Tabla consumo de recursos distintas aplicaciones***
+##### Tabla consumo de recursos distintas aplicaciones#####
 
 | Recuros             | Chromium | Sublime Text   | Mandelbrot.py
 | :-------            | :------: | -----:         |-----:         
