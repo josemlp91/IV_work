@@ -62,4 +62,7 @@ Paso 3:
 |memory.max_usage_in_bytes  | 470978560     | 63188992 | 107446272
 
 
+> pendiente segundo apartado
 
+2 .Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización.
+Añadir los costes eléctricos correspondientes.
