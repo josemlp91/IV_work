@@ -52,6 +52,12 @@ Paso 2:
 Paso 3:
 <http://showterm.io/9d4def54f06cd45b49c70#fast>
 
+| Recuros             | Chromium | Sublime Text   | Mandelbrot.py
+| :-------            | :------: | -----:         |-----:         
+|cpuacct.usage_percpu | 13181653556 6499539992 11944331085 6010034198 | 1491227726 794997556 830199868 652466764 | 125306944410 169694806577 246520653233 110845284318
+|cpuacct.stat         | user 121 system 19    | user 120 system 13         | user 65357  system 15
+|cpuacct.usage        | 39537256881    | 4569691585  |  654111370098
+|memory.max_usage_in_bytes  | 470978560     | 63188992 | 107446272
 
 
 
