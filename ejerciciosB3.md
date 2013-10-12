@@ -11,4 +11,4 @@ uname -m
 grep -i vmx /proc/cpuinfo
 ~~~
 
-[Consola](http://showterm.io/4f1ff54e3b101ddb9025b)
+[Consola](http://showterm.io/4f1ff54e3b101ddb9025b#fast)
