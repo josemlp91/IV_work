@@ -13,7 +13,7 @@ grep -i vmx /proc/cpuinfo
 
 [Consola](http://showterm.io/4f1ff54e3b101ddb9025b#fast)
 
-###Ejercicio 9
+###Ejercicio 10
 Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok.
 
 
@@ -23,3 +23,16 @@ KVM acceleration can be used
 ~~~
 
 [Consola](<http://showterm.io/5e5ec99329a5f89f5741a#fast)
+
+###Ejercicio 11
+Comentar diferentes soluciones de Software as a Service de uso habitual.
+
+>>Resumiendo lo comentado por todos por todos los compañeros de la clase, las aplicaciones más habituales son
+
+>>Todo el paquete  servicios que se montan sobre Google Drive, junto con  Google Maps, Gmail o Google Calendar.
+>>Redes sociales como Twitter y Facebook.
+>>Servicios multimedia como Grooveshark.
+>>Gestión de proyectos como GitHub, TeamBox o RedMine.
+>>Ofimatia  Prezi y Office365
+
+>>>Destacar que Dropbox es un  IaaS, muchos de nosotros nos hemos confundido.
