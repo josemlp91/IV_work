@@ -36,3 +36,22 @@ Comentar diferentes soluciones de Software as a Service de uso habitual.
 >>Ofimatia  Prezi y Office365
 
 >>>Destacar que Dropbox es un  IaaS, muchos de nosotros nos hemos confundido.
+
+###Ejercicio 12
+Instalar un entorno virtual para tu lenguaje de programación favorito 
+(uno de los mencionados arriba, obviamente).
+
+
+~~~
+sudo apt-get install python-virtualenv
+
+virtualenv mi_proyecto
+virtualenv nuevo_proyecto -p /usr/bin/python2.7
+
+cd mi_proyecto
+source bin/activate <proyecto>
+~~~
+
+[Consola](http://showterm.io/273f915fde4cb36bb5650)
+
+
