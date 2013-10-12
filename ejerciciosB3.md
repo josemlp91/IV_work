@@ -52,6 +52,14 @@ cd mi_proyecto
 source bin/activate <proyecto>
 ~~~
 
-[Consola](http://showterm.io/273f915fde4cb36bb5650)
+[Consola](http://showterm.io/273f915fde4cb36bb5650#fast)
+
+###Ejercicio 13
+Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift.
+
+
+
+
+
 
 
