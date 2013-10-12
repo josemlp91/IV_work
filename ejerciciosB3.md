@@ -58,7 +58,7 @@ source bin/activate <proyecto>
 Darse de alta en algún servicio PaaS tal como Heroku, Nodejitsu u OpenShift.
 
 
-![OpenShift](https://github.com/josemlp91/IV_work/blob/master/Selecci%C3%B3n_002.png)
+[OpenShift]: https://github.com/josemlp91/IV_work/blob/master/Selecci%C3%B3n_002.png
 
 
 
