@@ -27,7 +27,7 @@ KVM acceleration can be used
 ###Ejercicio 11
 Comentar diferentes soluciones de Software as a Service de uso habitual.
 
->>Resumiendo lo comentado por todos por todos los compañeros de la clase, las aplicaciones más habituales son
+>>Resumiendo lo comentado por todos por todos los compañeros de la clase, las aplicaciones más habituales son:
 
 >>Todo el paquete  servicios que se montan sobre Google Drive, junto con  Google Maps, Gmail o Google Calendar.
 >>Redes sociales como Twitter y Facebook.
