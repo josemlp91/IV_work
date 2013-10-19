@@ -283,6 +283,7 @@ Para un sistema de prueba de software e integración continua, virtualización d
 **2 )Crear un programa simple en cualquier lenguaje interpretado para Linux,
 empaquetarlo con CDE y probarlo en diferentes distribuciones.**
 
+Para este apartado usé la referencia :
 [Referencia:](http://blog.desdelinux.net/como-crear-aplicaciones-portables-de-linux/)
 
 
