@@ -1,4 +1,3 @@
-
 ###Ejercicio 1:
 
 Mi servidor elegido es Servidor HP  Z220C ZC3.4 4/1T W8P64 DG cuyas especificaciones se encuentran en: 
@@ -270,3 +269,22 @@ Alquiler de servidores dedicados:
 Como puede verse si no vamos a hacer un uso intensivo, los servidores virtualizados son una solución mucho más economica.
 
 ------------------------------------------------------------------------------------------------------
+###Ejercicio 3
+**1 )¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro**
+
+
+Para alojar varios clientes en un sólo servidor, visualización plena, que facilita mayor control del sistema a los usuarios y permite aislarlos los unos de otros.
+
+Para crear un sistema eficiente de web + middleware + base de datos, virtualización de aplicaciones, por permitir encapsular software y hacer que se ejecute independientemente a la plataformas, dando la opción de cambiar rápidamente de plataforma si vemos que ese cambio mejora el rendimiento.
+
+Para un sistema de prueba de software e integración continua, virtualización de entornos de desarrollo, pudiendo simular como se comportaría en un entorno de producción pero sin asumir riesgos en el entorno real.
+
+
+**2 )Crear un programa simple en cualquier lenguaje interpretado para Linux,
+empaquetarlo con CDE y probarlo en diferentes distribuciones.**
+
+Para este apartado usé la referencia :
+[Referencia:](http://blog.desdelinux.net/como-crear-aplicaciones-portables-de-linux/)
+
+
+
