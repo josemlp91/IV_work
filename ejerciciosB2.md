@@ -52,6 +52,7 @@ Paso 2:
 Paso 3:
 <http://showterm.io/9d4def54f06cd45b49c70#fast>
 
+
 ##### Tabla consumo de recursos distintas aplicaciones#####
 
 | Recuros             | Chromium | Sublime Text   | Mandelbrot.py
@@ -62,13 +63,13 @@ Paso 3:
 |memory.max_usage_in_bytes  | 470978560     | 63188992 | 107446272
 
 
-> pendiente segundo apartado
+
 
 2 .Calcular el coste real de uso de recursos de un ordenador teniendo en cuenta sus costes de amortización.
 Añadir los costes eléctricos correspondientes.
 
 ### Ejercicio 8
-___Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.___
+1) ___Discutir diferentes escenarios de limitación de uso de recursos o de asignación de los mismos a una u otra CPU.___
 
 >> Mi idea es hacer una aproximación de los recursos de un dispositivo con recursos limitados, (como un smartphone),
 un ejemplo seria que estamos desarrollando una aplicación web responsive, destina a una empresa 
@@ -80,5 +81,26 @@ para que se adapte mejor, y ahorrar costes al tener solo los recursos justos a l
 para situaciones donde sabemos que se va a requerir de más recursos. Un ejemplo el servidor de "una tienda virtual"
 donde sabemos que en verano se usa muy poco, podemos disminuir el porcentaje de CPU y la RAM,
 y en la época de navidad hacer una asignacion de recursos máxima.
+
+2) ___Implementar usando el fichero de configuración de cgcreate una política que dé menos prioridad 
+a los procesos de usuario que a los procesos del sistema (o viceversa).___
+
+Si queremos modificar la prioridad de un proceso debemos modificar el parametro "cpu.shares", que  en cgroups
+se localiza en "/sys/fs/cgroup/cpu"
+
+Ahora debemos configurar el fichero "/etc/cgrules.conf" que es el encargado de mover los procesos segun el usuario,
+a el grupo determinado.
+
+![captura](https://github.com/josemlp91/IV_work/blob/master/capturas/cap.png?raw=true)
+
+Creamos los grupos
+~~~
+sudo cgcreate -g cpu:p_usu
+sudo cgcreate -g cpu.p_sys
+~~~
+Reiniciamos:
+~~~
+sudo service cgconfig start
+~~~
 
 
