@@ -100,7 +100,20 @@ sudo cgcreate -g cpu.p_sys
 ~~~
 Reiniciamos:
 ~~~
-sudo service cgconfig start
+sudo service cgconfig restart
 ~~~
+
+3) ___Implementar usando el fichero de configuración de cgcreate una política que dé menos prioridad 
+a los procesos de usuario que a los procesos del sistema (o viceversa).___
+
+![captura2](https://github.com/josemlp91/IV_work/blob/master/capturas/cap2.png?raw=true)
+
+Por ultimo hay que añadir CGROUP_DAEMON="cpu:blkio:/http" al fichero de configuración de apache 
+"/etc/apache2/apache2.conf"
+
+Despues se crea la gerarquia de grupos y se reinicia cgconfig
+
+Referencia:
+[enlace](http://www.openlogic.com/wazi/bid/188056/)
 
 
