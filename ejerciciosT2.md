@@ -47,5 +47,21 @@ Asignamos interfaz al puente:
 brctl addif wifivirtual wlan1
 ~~~
 
+###Ejercicio 3:
+
+#####Usar debootstrap (o herramienta similar en otra distro)
+para crear un sistema mínimo que se pueda ejecutar más adelante
+
+Tenemos que instalar antes el paquete debootstrap
+~~~
+sudo apt-get install debootstrap
+~~~
+
+Vamos a crear un sistema Ubuntu 13.10 (Saucy Salamander), para ello, especificamos la arquitectura,
+la distribución, el directorio de instalación y la url donde se encuentra la distribución 
+
+~~~
+sudo debootstrap --arch=amd64 saucy /home/jaulas/saucy/ http://archive.ubuntu.com/ubuntu
+~~~
 
 
