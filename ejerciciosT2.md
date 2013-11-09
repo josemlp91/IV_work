@@ -121,8 +121,14 @@ Ya vemos que es simple la instalacion de aplicaciones en la jaula.
 
 
 
+###Ejercicio 5:
+##### Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.
 
+Sigueindo los paso de : https://www.digitalocean.com/community/articles/how-to-install-the-latest-version-of-nginx-on-ubuntu-12-10
 
+captura
+
+###Ejercicio 6:
 
 
 
