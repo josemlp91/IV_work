@@ -167,7 +167,7 @@ Observamos la aplicacion que usa el puerto 80 y la detenemos
 ###Ejercicio 6:
 #####Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar. 
 
-Primero descargar jailkit….
+1. Primero descargar jailkit….
 ~~~
 wget http://olivier.sessink.nl/jailkit/jailkit-2.14.tar.gz
 ~~~
@@ -180,6 +180,18 @@ cd jailkit-2.14
 make
 sudo make install
 ~~~
+Decir que con este proceso, make me daba errores, y no era capaz de completarse la instalación.
+Para solucionarlo he usado la aplicación ```alien``` que es un convertidor de paquetes de Linux.
+
+Se instala usando: ```sudo apt-get install alien```
+
+y lo uso para combertir el paquete a .deb dado que estoy en ubuntu:
+
+~~~
+sudo alien jailkit-2.14.tar.gz
+~~~
+
+Una vez creado ```jailkit-2.14.dev```, lo instalo directamente haciendo doble click en él, y aceptando la instalación.
 
 Crear el directorio que contendrá el sistema enjaulado…
 ~~~
@@ -187,7 +199,7 @@ sudo mkdir /seguro/jaulas/dorada
 sudo chown root:root:root /seguro
 ~~~
 
-Crear el entorno
+2. Crear el entorno
 ~~~
 sudo jk_init -v /seguro/jaulas/dorada basicshell
 sudo jk_init -v /seguro/jaulas/dorada editors
@@ -196,23 +208,28 @@ sudo jk_init -v /seguro/jaulas/dorada netutils
 sudo jk_init -v /seguro/jaulas/dorada ssh
 sudo jk_init -v /seguro/jaulas/dorada sftp
 sudo jk_init -v /seguro/jaulas/dorada sftp
+...
 ~~~
 
 Crear el usuario y enjaularlo
 
 ~~~
-adduser user_jk
-sudo jk_jailuser -m -j /seguro/jaulas/dorada user_jk
+adduser pardillo
+sudo jk_jailuser -m -j /seguro/jaulas/dorada pardillo
 ~~~
 
 Comprobar que el fichero ```/etc/passwd``` tiene la siguiente linea
 ~~~
-jail_user:x:1001:500::/home/jail/./home/jail_user:/usr/sbin/jk_chrootsh
+pardillo:x:1001:500::/home/jail/./home/jail_user:/bin/bash
 ~~~
 Asignar una contraseña al usuario
 ~~~
-sudo passwd jail_user
+sudo passwd pardillo
 ~~~
+
+
+
+
 
 
 
