@@ -47,6 +47,8 @@ Asignamos interfaz al puente:
 brctl addif wifivirtual wlan1
 ~~~
 
+![Puentes red](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/mostrarPuentes.png?raw=true)
+
 ###Ejercicio 3:
 
 #####Usar debootstrap (o herramienta similar en otra distro)
@@ -57,12 +59,17 @@ Tenemos que instalar antes el paquete debootstrap
 sudo apt-get install debootstrap
 ~~~
 
+![Instalar debbotstrp](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej3.png?raw=true)
+
 Vamos a crear un sistema Ubuntu 13.10 (Saucy Salamander), para ello, especificamos la arquitectura,
 la distribución, el directorio de instalación y la url donde se encuentra la distribución 
 
 ~~~
 sudo debootstrap --arch=amd64 saucy /home/jaulas/saucy/ http://archive.ubuntu.com/ubuntu
 ~~~
+
+![1](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/cap3c.png?raw=true)
+![2](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/cap3b.png?raw=true)
 
 #####Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
 
@@ -75,6 +82,7 @@ Descargamos la distribucion de fedora:
 ~~~
 sudo rinse --arch=i386 --distribution fedora-core-7 --directory /home/jaulas/fedora/
 ~~~
+![3](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/fedora_con%20rince.png?raw=true)
 
 //captura
 ###Ejercicio 4:
@@ -88,14 +96,17 @@ Del ejercicio donde utilizabamos "debootstrap" tengo instaladas varias jaulas co
 ~~~
 sudo chroot /home/jaulas/quantal
 ~~~
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_a.png?raw=true)
 
 2. Debemos montar /proc para que funcione procesos tales como top.
 
 ~~~
 mount -t proc proc /proc
 ~~~
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_b.png?raw=true)
 
-Captura top
+
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_c.png?raw=true)
 
 
 3. Una vez esto ya podemos instalar aplicaciones tal como estamos acostumbrados, 
@@ -105,7 +116,8 @@ como voy a crear un programita en c++, instalo un editor simple, para crear el f
 sudo apt-get install nano
 ~~~
 
-//captura nano.
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_d.png?raw=true)
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_e.png?raw=true)
 
 4. Instalamos compilador de c++, gcc
 
@@ -115,7 +127,8 @@ sudo apt-get install gcc
 
 5. Compilamos el codigo.
 
-//captura
+!()[https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_f.png?raw=true]
+
 
 Ya vemos que es simple la instalacion de aplicaciones en la jaula.
 
