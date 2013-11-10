@@ -127,7 +127,7 @@ sudo apt-get install gcc
 
 5. Compilamos el codigo.
 
-!()[https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_f.png?raw=true]
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej4_f.png?raw=true)
 
 
 Ya vemos que es simple la instalacion de aplicaciones en la jaula.
@@ -137,19 +137,82 @@ Ya vemos que es simple la instalacion de aplicaciones en la jaula.
 ###Ejercicio 5:
 ##### Instalar una jaula chroot para ejecutar el servidor web de altas prestaciones nginx.
 
-Sigueindo los paso de : https://www.digitalocean.com/community/articles/how-to-install-the-latest-version-of-nginx-on-ubuntu-12-10
+Sigueindo los paso de : 
 
-captura
+[Instalar nginx](https://www.digitalocean.com/community/articles/how-to-install-the-latest-version-of-nginx-on-ubuntu-12-10)
+
+~~~
+sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:nginx/stable
+sudo apt-get update
+sudo apt-get install nginx
+~~~
+
+sudo service nginx start
+
+Puede que al arrancar nginx de error:
+Esto tener otra aplicacion utilizando el puerto 80, para solucionarlo utilizar
+
+~~~
+netstat -tulpn
+~~~
+Observamos la aplicacion que usa el puerto 80 y la detenemos
+
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/ej5.png?raw=true)
+
+
 
 ###Ejercicio 6:
+#####Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar. 
 
+Primero descargar jailkit….
+~~~
+wget http://olivier.sessink.nl/jailkit/jailkit-2.14.tar.gz
+~~~
 
+Despues de descargar, instalar…
+~~~
+tar -zxvf jailkit-2.14.tar.gz
+cd jailkit-2.14
+./configure
+make
+sudo make install
+~~~
 
+Crear el directorio que contendrá el sistema enjaulado…
+~~~
+sudo mkdir /seguro/jaulas/dorada
+sudo chown root:root:root /seguro
+~~~
 
+Crear el entorno
+~~~
+sudo jk_init -v /seguro/jaulas/dorada basicshell
+sudo jk_init -v /seguro/jaulas/dorada editors
+sudo jk_init -v /seguro/jaulas/dorada extendedshell
+sudo jk_init -v /seguro/jaulas/dorada netutils
+sudo jk_init -v /seguro/jaulas/dorada ssh
+sudo jk_init -v /seguro/jaulas/dorada sftp
+sudo jk_init -v /seguro/jaulas/dorada sftp
+~~~
 
+Crear el usuario y enjaularlo
 
+~~~
+adduser user_jk
+sudo jk_jailuser -m -j /seguro/jaulas/dorada user_jk
+~~~
 
-
+Comprobar que el fichero ```/etc/passwd``` tiene la siguiente linea
+~~~
+jail_user:x:1001:500::/home/jail/./home/jail_user:/usr/sbin/jk_chrootsh
+~~~
+Asignar una contraseña al usuario
+~~~
+sudo passwd jail_user
+~~~
 
 
 
