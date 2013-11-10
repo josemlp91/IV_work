@@ -228,7 +228,7 @@ sudo passwd pardillo
 ~~~
 
 
-
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/pardillo.png?raw=true)
 
 
 
