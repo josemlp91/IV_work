@@ -1,4 +1,4 @@
-######Ejercicios tema 3
+###Ejercicios tema 3
 
 ![Instalar LXC](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/josemlp@josemlp-ubuntu:%20~-Escritorio_027.png?raw=true)
 ![Check LXC](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/josemlp@josemlp-ubuntu:%20~-Escritorio_028.png?raw=true)
