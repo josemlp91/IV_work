@@ -168,6 +168,7 @@ Observamos la aplicacion que usa el puerto 80 y la detenemos
 #####Crear una jaula y enjaular un usuario usando `jailkit`, que previamente se habrá tenido que instalar. 
 
 1. Primero descargar jailkit….
+
 ~~~
 wget http://olivier.sessink.nl/jailkit/jailkit-2.14.tar.gz
 ~~~
@@ -194,12 +195,14 @@ sudo alien jailkit-2.14.tar.gz
 Una vez creado ```jailkit-2.14.dev```, lo instalo directamente haciendo doble click en él, y aceptando la instalación.
 
 Crear el directorio que contendrá el sistema enjaulado…
+
 ~~~
 sudo mkdir /seguro/jaulas/dorada
 sudo chown root:root:root /seguro
 ~~~
 
 2. Crear el entorno
+
 ~~~
 sudo jk_init -v /seguro/jaulas/dorada basicshell
 sudo jk_init -v /seguro/jaulas/dorada editors
@@ -208,7 +211,7 @@ sudo jk_init -v /seguro/jaulas/dorada netutils
 sudo jk_init -v /seguro/jaulas/dorada ssh
 sudo jk_init -v /seguro/jaulas/dorada sftp
 sudo jk_init -v /seguro/jaulas/dorada sftp
-...
+
 ~~~
 
 Crear el usuario y enjaularlo
@@ -228,7 +231,7 @@ sudo passwd pardillo
 ~~~
 
 
-
+![](https://github.com/josemlp91/IV_work/blob/master/capturas_T2/pardillo.png?raw=true)
 
 
 
