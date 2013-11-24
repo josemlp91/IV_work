@@ -42,18 +42,52 @@ O directamente ``ifconfig``, que nos muestra todos los interfaces.
 
 ![interfaz red lxc](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/josemlp@josemlp-ubuntu:%20~_032.png?raw=true)
 
+**Ejercicio 2** :
+_Crear y ejecutar un contenedor basado en Debian._
+
+__Creamos un nuevo contenedor, en este caso con la misma arquitectura que el sistema anfitrion__
+
 ~~~
-sudo lxc-create -t ubuntu-cloud -n nubecilla
+sudo lxc-create -t ubuntu-cloud -n una-caja
 ~~~
 
 ![creando contenedor_ubuntu](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/josemlp@josemlp-ubuntu:%20~-Escritorio_030.png?raw=true)
 
 
+__Ya podemos arrancarlo__
+
+~~~
+sudo lxc-start -n una-caja
+~~~
+
 ![arrancando contenedor ubuntu](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/josemlp@josemlp-ubuntu:%20~_031.png?raw=true)
+
+~~~
+sudo lxc-stop -n una-caja
+~~~
+**Ejercicio 4** : 
+_Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas._
+
+Siguiendo el manual: [xc-with-lxc-web-pannel-in-ubuntu](http://www.computersnyou.com/2123/2013/07/installing-lxc-with-lxc-web-pannel-in-ubuntu/)
+~~~
+$ sudo apt-get install lxc debootstrap bridge-utils -y
+$ sudo su
+$ wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
+~~~
+
+~~~
+open broswer 
+
+http://localhost:5000  
+username :  admin 
+password admin
+~~~
+
 
 ![ASCII ART](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/Selecci%C3%B3n_040.png?raw=true)
 
+Arrancamos web panel:
 ![lxc web panel](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/Overview%20-%20LXC%20Web%20Panel%20-%20Chromium_033.png?raw=true)
 
-
+Modificamos la nubecilla:
 ![modificando nubecilla](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/Una-caja%20-%20LXC%20Web%20Panel%20-%20Chromium_037.png?raw=true)
