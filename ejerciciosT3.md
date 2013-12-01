@@ -92,7 +92,7 @@ Arrancamos web panel:
 _Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria._
 Modificamos la nubecilla:
 
-![modificando nubecilla](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/Una-caja%20-%20LXC%20Web%20Panel%20-%20Chromium_037.png?raw=true)
+![modificando nubecilla](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/jaula_vs_LXC__nginx__.png?raw=true)
 
 **Ejercicio 5** : 
 _Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx._
@@ -103,7 +103,7 @@ sudo debootstrap --arch=amd64 saucy /home/jaulas/saucy/ http://archive.ubuntu.co
 ~~~
 
 Instalamos nginx en la jaula:
-[TEMA_2_ej5](https://github.com/josemlp91/IV_work/blob/master/ejerciciosT2.md#ejercicio-5)
+[TEMA_2_ej5](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/jaula_vs_LXC__nginx__.png?raw=true)
 
 En este caso me ha dado error y e necesitado modificar
 el puerto de escucha de nginx:
@@ -115,7 +115,12 @@ listen $puertoX;
 ~~~
 
 Entramos:
+
 ~~~
 sudo chroot /jaulas/saucy
 ~~~
+
+[]()
+
+
 
