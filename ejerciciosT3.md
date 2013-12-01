@@ -92,7 +92,7 @@ Arrancamos web panel:
 _Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria._
 Modificamos la nubecilla:
 
-![modificando nubecilla](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/jaula_vs_LXC__nginx__.png)
+![modificando nubecilla](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/jaula_vs_LXC__nginx__.png?raw=true)
 
 **Ejercicio 5** : 
 _Comparar las prestaciones de un servidor web en una jaula y el mismo servidor en un contenedor. Usar nginx._
