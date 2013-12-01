@@ -129,4 +129,4 @@ Optenemos la siguiente grafica
 ![Grafica](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/benchmark.png?raw=true)
 
 
-___Vemos que nginx es un poco más rápido en LXC container.___
+___Vemos que nginx es un poco más rápido en la jaula que en LXC container.___
