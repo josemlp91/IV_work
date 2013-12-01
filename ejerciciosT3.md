@@ -105,6 +105,15 @@ sudo debootstrap --arch=amd64 saucy /home/jaulas/saucy/ http://archive.ubuntu.co
 Instalamos nginx en la jaula:
 [TEMA_2_ej5](https://github.com/josemlp91/IV_work/blob/master/ejerciciosT2.md#ejercicio-5)
 
+En este caso me ha dado error y e necesitado modificar
+el puerto de escucha de nginx:
+
+~~~
+Editar:
+nano /etc/nginx/sites-enabled/default
+listen $puertoX;
+~~~
+
 Entramos:
 ~~~
 sudo chroot /jaulas/saucy
