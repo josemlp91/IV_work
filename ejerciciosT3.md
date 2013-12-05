@@ -120,7 +120,13 @@ Entramos:
 sudo chroot /jaulas/saucy
 ~~~
 
-[]()
+![arrancamos nginx en LXC](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/LXC_nginx.png?raw=true)
+![arrancamos nginx en JAULA](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/nginx_jaula.png?raw=true)
+
+Usando el siguiente manual grafico resultado Apache Benchmark [enlace](http://www.fjordan.es/graficar-resultados-de-apachebench-con-gnuplot.html)
+
+Optenemos la siguiente grafica
+![Grafica](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/benchmark.png?raw=true)
 
 
-
+___Vemos que nginx es un poco más rápido en la jaula que en LXC container.___
