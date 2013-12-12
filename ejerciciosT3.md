@@ -132,7 +132,140 @@ Optenemos la siguiente grafica
 ___Vemos que nginx es un poco más rápido en la jaula que en LXC container.___
 
 
-**Ejercicio 5** : 
+**Ejercicio 6** : 
 _Instalar juju._
 _Usándolo, instalar MySql en un táper._
 
+
+La isntalación la realizo segun nos indica los apuntes de la asignatura:
+
+~~~
+sudo add-apt-repository ppa:juju/stable
+sudo apt-get update 
+sudo apt-get install juju-core
+~~~
+
+Una vez ya podemos comenzar a trabajar con el:
+
+~~~
+juju init
+~~~
+
+![juju_init](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/juju_init.png?raw=true)
+
+Para trabajar con contenedores LXC locales:
+
+![default_local](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/juju_local.png?raw=true)
+
+
+
+~~~
+juju switch local
+~~~
+
+Es requisito para trabajar en local tener instalado MongDB
+
+Comporbamos que efectivamente esta intalada y arrancada.
+
+![mongo_db](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/mongoArrancado.png?raw=true)
+
+Ya podemos crear nuestro táper y desplegar mediawiki:
+
+~~~
+juju bootstrap
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki mysql
+juju expose mediawiki
+juju status
+~~~
+
+![jujustatus](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/juju_status_mediawiki.png?raw=true)
+
+
+![mediawiki_juju](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/mediaWiki_funcionando.png?raw=true)
+
+**Ejercicio 7** : 
+
++ Destruir toda la configuración creada anteriormente
++ Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.
++ Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta
+
+Destruimos toda la configuración anterior.
+
+~~~
+sudo juju destroy-unit mysql/0
+sudo juju destroy-unit mediawiki/0
+~~~
+
+o 
+
+~~~
+juju remove-unit  mysql/0 mediawiki/0
+~~~
+
+Desrtuir la máquina
+
+juju destory-machine 2
+
+Tambien se da la opcion de destruir todo el entorno:
+
+~~~
+juju destroy-environment -e local
+~~~
+
+
+Una vez que lo elinamos se nos pide volver a crear la misma configuración
+pues repetimos los mismo pasos:
+
+
+~~~
+juju bootstrap
+juju deploy mediawiki
+juju deploy mysql
+juju add-relation mediawiki mysql
+juju expose mediawiki
+juju status
+~~~
+
+__Script para automatizarlo todo__
+
+~~~
+ #!/bin/bash
+
+if [ $# == 1 ]; then
+
+	if [ $1 == "crear" ]; then
+		juju switch local
+		sudo juju bootstrap
+		juju add-machine
+		juju deploy mediawiki
+		juju deploy mysql 
+		juju add-relation mediawiki:slave mysql:db 
+		juju expose mediawiki 
+		juju status
+		echo "[Mediawiki desplegada]"
+		
+	elif [ $1 == "destruir" ]; then
+
+		juju unexpose mediawiki
+                juju destroy-relation mediawiki:db mysql
+                juju destroy-service mysql
+                juju destroy-service mediawiki
+		echo "[Entorno mediawiki eliminado]"
+
+	elif [ $1 == "destruir" ]; then
+		echo "[Parametro incorrecto, juju.sh <crear> | <destruit>]"
+	fi
+
+elif [ $# != 1 ]; then
+
+	echo "[Parametro incorrecto, juju.sh <crear> | <destruit>]"
+	
+
+fi
+		
+                                
+                                
+
+~~~ 
