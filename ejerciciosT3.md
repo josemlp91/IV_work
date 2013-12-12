@@ -267,3 +267,42 @@ elif [ $# != 1 ]; then
 
 fi
 ~~~ 
+
+
+
+**Ejercicio 8** : 
+_Instalar libvirt. Te puede ayudar esta guía para Ubuntu._
+
+~~~
+sudo apt-get install kvm libvirt-bin
+~~~
+
+Añado mi usuario al grupo de libvirtd
+
+~~~
+sudo adduser josemlp libvirtd
+~~~
+
+**Ejercicio 9** :
+
++ Instalar un contenedor usando virt-install.
+
+Necesitamos instalar tanto ``` virtinst``` como ```virt-viewer```
+~~~
+sudo apt-get install virtinst
+sudo apt-get install virt-viewer
+~~~
+
+Creamos una maquina virtual Fedora19 en modo livecd
+~~~
+virt-install --name Fedora19_2  --ram 2048  --livecd --cdrom=./Escritorio/Fedora-Live-Desktop-x86_64-19-1.iso  --noautoconsole --nodisk
+~~~
+
+Mostamos la maquina
+~~~
+virt-viewer Fedora19_2
+~~~
+
+
+
+[Ejemplos de virt-install](http://www.adminso.es/index.php/Creaci%C3%B3n_de_m%C3%A1quinas_virtuales_con_virt-install)
