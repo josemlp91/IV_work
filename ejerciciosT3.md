@@ -245,7 +245,7 @@ if [ $# == 1 ]; then
 		juju expose mediawiki 
 		juju status
 		echo "[Mediawiki desplegada]"
-		
+
 	elif [ $1 == "destruir" ]; then
 
 		juju unexpose mediawiki
@@ -264,8 +264,4 @@ elif [ $# != 1 ]; then
 	
 
 fi
-		
-                                
-                                
-
 ~~~ 
