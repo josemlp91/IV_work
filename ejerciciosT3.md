@@ -204,9 +204,11 @@ o
 juju remove-unit  mysql/0 mediawiki/0
 ~~~
 
-Desrtuir la máquina
+Desrtruir la máquina
 
+~~~
 juju destory-machine 2
+~~~
 
 Tambien se da la opcion de destruir todo el entorno:
 
