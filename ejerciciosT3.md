@@ -303,6 +303,8 @@ Mostamos la maquina
 virt-viewer Fedora19_2
 ~~~
 
+Mostamos la máquina arrancada
+![virt-viewer](https://github.com/josemlp91/IV_work/blob/master/capturas_T3/virt_viewer.png?raw=true)
 
 
 [Ejemplos de virt-install](http://www.adminso.es/index.php/Creaci%C3%B3n_de_m%C3%A1quinas_virtuales_con_virt-install)
