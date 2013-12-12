@@ -130,3 +130,9 @@ Optenemos la siguiente grafica
 
 
 ___Vemos que nginx es un poco más rápido en la jaula que en LXC container.___
+
+
+**Ejercicio 5** : 
+_Instalar juju._
+_Usándolo, instalar MySql en un táper._
+
