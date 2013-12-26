@@ -11,6 +11,9 @@ A la vez, conviene instalar también irb, rubygems y rdoc._
 sudo apt-get install ruby1.9.3
 ~~~
 
+![version](https://github.com/josemlp91/IV_work/blob/master/capturas_Ruby/josemlp@josemlp-ubuntu:%20~_041.png?raw=true)
+
+
 ###Ejercicio 2:
 _Crear un programa en Ruby que imprima los números desde el 1 hasta otro contenido en una variable._
 
@@ -24,6 +27,8 @@ begin
    $i +=1;
 end until $i > $num
 ~~~
+
+
 
 ###Ejercicio 3:
 _¿Se pueden crear estructuras de datos mixtas en Ruby? Crear un array de hashes de arrays e imprimirlo._
@@ -42,6 +47,8 @@ _¿Se pueden crear estructuras de datos mixtas en Ruby? Crear un array de hashes
     end
 
 ~~~
+![estructuraMixta](https://github.com/josemlp91/IV_work/blob/master/capturas_Ruby/josemlp@josemlp-ubuntu:%20~-Escritorio_005.png?raw=true)
+
 
 ###Ejercicio 4:
 _Crear una serie de funciones instanciadas con un URL que devuelvan algún tipo de información sobre el mismo: fecha de última modificación, por ejemplo. Pista: esa información está en la cabecera HTTP que devuelve._
@@ -78,6 +85,9 @@ _Crear una serie de funciones instanciadas con un URL que devuelvan algún tipo 
 
 ~~~
 
+![infServidor](https://github.com/josemlp91/IV_work/blob/master/capturas_Ruby/josemlp@josemlp-ubuntu:%20~-Escritorio_002.png?raw=true)
+
+
 ###Ejercicio 5:
 _Ver si está disponible Vagrant como una gema de Ruby e instalarla._
 
@@ -93,9 +103,13 @@ Pero si como una gema remota:
 gem search --remote vagrant
 ~~~
 
+![gemaNodisponible](https://github.com/josemlp91/IV_work/blob/master/capturas_Ruby/josemlp@josemlp-ubuntu:%20~_003.png?raw=true)
+
 Como vemos al ejecurar directamente ```sudo gem install vagrant``` no da el siguiente error.
 
-Como nos indica los apuntes es interesante istallar ```rubygems``` y  ```ruby1.9.1-dev```.
+![error](https://github.com/josemlp91/IV_work/blob/master/capturas_Ruby/josemlp@josemlp-ubuntu:%20~_004.png?raw=true)
+
+Como nos indica los apuntes es interesante instalar ```rubygems``` y  ```ruby1.9.1-dev```.
 
 ~~~
 sudo apt-get install rubygems ruby1.9.1-dev
