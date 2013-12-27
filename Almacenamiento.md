@@ -12,6 +12,8 @@ Consulto discos duros:
 cat /proc/scsi/scsi
 ~~~
 
+![cap1](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/josemlp@josemlp-ubuntu:%20~_006.png?raw=true)
+
 Vemos que cuento con "tres discos duros" el primero es el disco duro original del portatil, de 500GB.
 
 El segundo es un disco SSD de 120GB.
@@ -23,6 +25,9 @@ Usando:
 ~~~
 sudo lsblk -fm
 ~~~
+
+![cap2](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/josemlp@josemlp-ubuntu:%20~_007.png?raw=true)
+
 
 Podemos ver la gerarquia de las particiones de cada disco duro.
 
@@ -44,9 +49,13 @@ Podemos ver la gerarquia de las particiones de cada disco duro.
 
 >>>```sdb5```:swap ubuntu
 
+![cap3](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/josemlp@josemlp-ubuntu:%20~_008.png?raw=true)
+
 
 Podemos verlo más graficamente utilizando gparted
 
+![cap4](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/-dev-sda%20-%20GParted_010.png?raw=true)
+![cap5](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/-dev-sdb%20-%20GParted_009.png?raw=true)
 
 _Si tienes acceso en tu escuela o facultad a un ordenador común para las prácticas, ¿qué almacenamiento físico utiliza?_
 
