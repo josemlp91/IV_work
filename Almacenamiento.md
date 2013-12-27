@@ -36,8 +36,12 @@ Podemos ver la gerarquia de las particiones de cada disco duro.
 >```sdb```:hace referencia al disco SSD, destinado principalmente a SO y programas.
 
 >>```sdb1```: Particion primaria para Windows
+
 >>```sdb2```: Particion extendida para Linux
+
+
 >>>```sdb6```: Montaje ubuntu
+
 >>>```sdb5```:swap ubuntu
 
 
