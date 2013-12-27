@@ -64,6 +64,6 @@ Completar cuando este en la escuela.
 
 _Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes._
 
-
+...
 
 
