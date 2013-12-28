@@ -100,6 +100,10 @@ Primero probar que la conexion ssh funciona correctamente y que se identifican b
 ssh virtual@192.168.1.15
 ~~~
 
+
+![ubuntu_server](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/virtual@josemlpVirtual:%20~_014.png?raw=true)
+
+
 Añadimos el usuario al grupo fuse de la maquina virtual:
 
 ~~~
@@ -115,15 +119,19 @@ Ejecutamos:
 sshfs virtual@192.168.1.15:/home ~/DiscoVirtual
 ~~~
 
+![sshfs](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/josemlp@josemlp-ubuntu:%20~_016.png?raw=true)
+
+No informa que el punto de montaje no esta vacio.
+
 Como vemos el disco virtual va a tener el contenido de /home de la maquina virtual.
 
+![nautilus](https://github.com/josemlp91/IV_work/blob/master/capturas_T4/virtual_017.png?raw=true)
 
 
 Ademas probamos a editar los archivos y vemos como las escrituras tambien se producen de forma correcta.
 
 
 =======
-...
->>>>>>> 89c1543e39d2434916e04ee973836bc567156c14
+4
 
 
