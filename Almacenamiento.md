@@ -64,6 +64,7 @@ Completar cuando este en la escuela.
 
 _Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes._
 
+<<<<<<< HEAD
 ###Ejercicio 2
 Usar FUSE para acceder a recursos remotos como si fueran ficheros locales. Por ejemplo, sshfs para acceder a ficheros de una máquina virtual invitada o de la invitada al anfitrión.
 
@@ -121,5 +122,8 @@ Como vemos el disco virtual va a tener el contenido de /home de la maquina virtu
 Ademas probamos a editar los archivos y vemos como las escrituras tambien se producen de forma correcta.
 
 
+=======
+...
+>>>>>>> 89c1543e39d2434916e04ee973836bc567156c14
 
 
