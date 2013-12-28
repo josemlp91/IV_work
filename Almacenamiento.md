@@ -64,6 +64,62 @@ Completar cuando este en la escuela.
 
 _Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes._
 
+###Ejercicio 2
+Usar FUSE para acceder a recursos remotos como si fueran ficheros locales. Por ejemplo, sshfs para acceder a ficheros de una máquina virtual invitada o de la invitada al anfitrión.
+
+Dispongo de Ubuntu Server preinstalado en una máquina virtual VirtualBox, ademas ya tiene configurado el servicio SSH, y comparto mi clave pública con dicho servidor.
+
+
+Lo primero que tenemos que hacer es intalar ```sshfs``` tanto en el cliente como en el servidor, usando la orden ```sudo apt-get install sshfs```
+
+
+Añadir el usuario al grupo fuse:
+
+~~~
+sudo gpasswd -a $USER fuse
+~~~
+
+Lo siguiente es consultar la ip de mi máquina virtual ```ip -s route```
+~~~
+192.168.1.0/24 dev eth0  proto kernel  scope link  src 192.168.1.15 
+~~~
+
+Sabemos que el usuario de la maquina virtual es ```virtual```.
+
+Es necesario crear en el cliente un directorio que va a servirnos como punto de montaje de la unidad virtual.
+
+~~~
+mkdir DiscoVirtual
+~~~
+
+Primero probar que la conexion ssh funciona correctamente y que se identifican bien cliente y servidor.
+(No es requisito que se compartan las claves RSA, pero es interesante para no tener que introducir claves cada vez que montemos la unidad.)
+
+~~~
+ssh virtual@192.168.1.15
+~~~
+
+Añadimos el usuario al grupo fuse de la maquina virtual:
+
+~~~
+sudo gpasswd -a $USER fuse
+~~~
+
+Y ya lo tenemos todo listo para crear nuestro disco duro virtual:
+
+
+Ejecutamos:
+
+~~~
+sshfs virtual@192.168.1.15:/home ~/DiscoVirtual
+~~~
+
+Como vemos el disco virtual va a tener el contenido de /home de la maquina virtual.
+
+
+
+Ademas probamos a editar los archivos y vemos como las escrituras tambien se producen de forma correcta.
+
 
 
 
