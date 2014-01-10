@@ -130,8 +130,50 @@ Como vemos el disco virtual va a tener el contenido de /home de la maquina virtu
 
 Ademas probamos a editar los archivos y vemos como las escrituras tambien se producen de forma correcta.
 
+###Ejercicio 3
+*Crear imágenes con estos formatos (y otros que se encuentren tales como VMDK) y manipularlas a base de montarlas o con cualquier otra utilidad que se encuentre.*
 
-=======
-4
+Para crear imagenes en formato raw uso:
+	
+    fallocate -l 100M imagenfallocate.img 
+    
+Para crear imagenes de forma facil en distintos formatos voy a usar ```gemu-img```
+
+Estas son las caracteristicas de los formatos que soporta gemu-img.
+
+-  raw: 
+> El formato de imagen del disco crudo (predeterminado). Este formato tiene la ventaja de ser sencillo y de fácil exportación a los demás emuladores. Si su sistema de archivos admite huecos (por ejemplo en ext2 o ext3 en Linux o NTFS en Windows), entonces sólo los sectores escritos reservarán espacio. _Tal como se dice en los apuntes_. Use qemu-img info para concocer el tamaño real utilizado por la imagen o ls -ls en Unix/Linux. 
+
+- qcow2:
+>El formato de imagen QEMU, el formato más versatil. Utilícelo para imágenes más pequeñas (útil si su sistema de archivos no admite huecos, por ejemplo: en Windows), encriptación opcional AES, compresión basada en zlib y soporte de múltiples instantáneas de VM.
+
+- qcow: 
+>Formato anterior de imagen QEMU. Sólo se incluye para compatibilidad con versiones anteriores.
+
+- cow
+>El formato de imagen User Mode Linux Copy On Write. El formato cow se incluye sólo por compatibilidad con versiones anteriores. No funciona con Windows.
+
+- vmdk
+>Formato de imagen compatible de VMware 3 y 4.
+
+- cloop
+>Imagen Linux Compressed Loop, útil únicamente para reutilizar directamente imágenes comprimidas de CD-ROM, presentes por ejemplo, en los Knoppix CD-ROM.
 
 
+	qemu-img create -f qcow2 qcowImage.qcow2 5M 
+    qemu-img create -f vdi vdiImage.vdi 5M    
+    qemu-img create -f vmdk vmdkImage.vmdk 100M
+    
+    
+![qemu-img](http://pix.toile-libre.org/upload/original/1389347480.png)
+
+Voy a montar la última imagen creada en ```VMWare Player```.
+
+![vmware](http://pix.toile-libre.org/upload/original/1389348369.png)
+
+
+
+
+
+    
+    
