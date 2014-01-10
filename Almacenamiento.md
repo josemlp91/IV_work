@@ -377,6 +377,8 @@ Para subir todas las capturas de una forma rápida:
 
 	./subirAzure.sh tapercapt ./capt/
 
+![](http://pix.toile-libre.org/upload/original/1389380193.png)
+
 ###Enlaces 
 
 [http://josemlp.blob.core.windows.net/tapercapt/fondo.jpg](http://josemlp.blob.core.windows.net/tapercapt/fondo.jpg)
