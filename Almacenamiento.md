@@ -270,6 +270,32 @@ Creamos los puntos de montaje, y lo montamos
     sudo mount -t ceph josemlp-ubuntu:/ /mnt/ceph
 
     
+###Ejercicio 7:
+*Almacenar objetos y ver la forma de almacenar directorios completos usando ceph y rados.*
+
+Probemos los distintos comandos:
+ 
+ ####Crear pool:
+ 
+	sudo rados mkpool esa-piscina
+    
+ ####Listar pools creadas:
+    
+    rados lspools
+    
+ ####Ver contenido pools:   
+    
+    sudo rados df
+    
+####Introducir contenido en pool:
+
+	rados put -p prueba-piscina objeto archivo.img
+    
+ ![](http://pix.toile-libre.org/upload/original/1389367912.png)
+ 
+ Podemos ver como cambia la pools al introducir contenido:
+ 
+ ![](http://pix.toile-libre.org/upload/original/1389368389.png)
     
 
     
