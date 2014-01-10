@@ -349,6 +349,54 @@ _Nos avisa de que el archivo contiene información sensible, y que debemos borra
 ![](http://pix.toile-libre.org/upload/original/1389375609.png)
 	
 
+###Ejercicios 9:
+*Crear varios contenedores en la cuenta usando la línea de órdenes para ficheros de diferente tipo y almacenar en ellos las imágenes en las que capturéis las pantallas donde se muestre lo que habéis hecho.*
+
+	azure storage container create tapercapt -p blob
+    azure storage container create taperhtml -p blob
+    
+
+![](http://pix.toile-libre.org/upload/original/1389377448.png)
 
 
+Para subir todas las capturas de una forma rápida:
+
+```
+        #!/bin/bash
+        #Subir capturas Azure.
+        
+         taper=$1
+         directorio=$2
+         
+         cd $directorio
+         for i in $( ls  ); 
+             do
+                azure storage blob upload ./$i $taper $i                 
+             done
+```
+
+	./subirAzure.sh tapercapt ./capt/
+
+###Enlaces 
+
+[http://josemlp.blob.core.windows.net/tapercapt/fondo.jpg](http://josemlp.blob.core.windows.net/tapercapt/fondo.jpg)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_048.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_048.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_049.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_049.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_050.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_050.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_051.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_051.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_052.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_052.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_053.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_053.png)
+
+[http://josemlp.blob.core.windows.net/tapercapt/Selección_054.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_054.png)
+
+
+Por ultimo voy a subir al otro taper un documento html con este documento.
+
+##[http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html](http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html)
 
