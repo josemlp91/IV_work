@@ -171,7 +171,39 @@ Voy a montar la última imagen creada en ```VMWare Player```.
 
 ![vmware](http://pix.toile-libre.org/upload/original/1389348369.png)
 
+###Ejercicio 4
+*Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema.*
 
+Primeramente creamos las imagenes:
+
+	qemu-img create -f raw btrfs.img 200M
+	qemu-img create -f raw xfs.img 200M
+    
+![](http://pix.toile-libre.org/upload/original/1389349646.png)
+
+Ahora tenemos que convertirlas en dispositivos loop usando losetup.
+
+	sudo losetup -v -f btrfs.img
+    	"El dispositivo de bucle es /dev/loop0"
+        
+    sudo losetup -v -f xfs.img
+    	"El dispositivo de bucle es /dev/loop1"
+
+![](http://pix.toile-libre.org/upload/original/1389349816.png)
+
+Formateamos las unidades.
+
+Hay que instalar ```sudo apt-get install xfsprogs``` y ```sudo apt-get install btrfs-tools``
+
+	sudo mkfs.xfs /dev/loop0
+	sudo mkfs.btrfs /dev/loop1
+    
+    ![](http://pix.toile-libre.org/upload/original/1389350365.png)
+    
+    
+    
+    
+    
 
 
 
