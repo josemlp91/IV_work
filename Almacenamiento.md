@@ -204,13 +204,73 @@ Hay que instalar ```sudo apt-get install xfsprogs``` y ```sudo apt-get install b
  *Instalar ceph en tu sistema operativo.*
  
  	sudo apt-get install ceph-mds
- 
+
+
  ![](http://pix.toile-libre.org/upload/original/1389351945.png)
     
     
     
+### Ejercicio 6
+*Crear un dispositivo ceph usando BTRFS o XFS
+Avanzado Usar varios dispositivos en un nodo para distribuir la carga.*
+
+Creamos los directorios:
+
+	sudo mkdir -p /srv/ceph/{osd,mon,mds}
+	
+    sudo nano  /etc/ceph/ceph.conf
+    
+        [global]
+        auth cluster required = none
+        auth service required = none
+        auth client required = none
+        auth supported = none
+        log file = /var/log/ceph/$name.log
+        pid file = /var/run/ceph/$name.pid
+    [mon]
+        mon data = /srv/ceph/mon/$name
+    [mon.gpc]
+        host = josemlp-ubuntu
+        mon addr = 127.0.0.1:6789
+    [mds]
+    [mds.gpc]
+        host = josemlp-ubuntu
+    [osd]
+        osd data = /srv/ceph/osd/$name
+        osd journal = /srv/ceph/osd/$name/journal
+        osd journal size = 1000
+    [osd.0]
+        host = josemlp-ubuntu
+        xfs devs = /dev/loop2
+
+Creamos un nuevo volumen:
+
+    qemu-img create -f raw cephVol.img 1G
+    sudo losetup -v -f cephVol.img
+	sudo mkfs.xfs /dev/loop2
 
 
+Creamos el directorio que se indica en los apuntes:
+	sudo mkdir /srv/ceph/osd/osd.0
+
+Creamos el sistema de ficheros de objetos:
+	sudo /sbin/mkcephfs -a -c /etc/ceph/ceph.conf
+   
+ ![](http://pix.toile-libre.org/upload/original/1389355047.png)
+ 
+Iniciamos el servicio:
+	
+    sudo /etc/init.d/ceph -a start
+
+![](http://pix.toile-libre.org/upload/original/1389356291.png)
+
+Creamos los puntos de montaje, y lo montamos
+
+    sudo mkdir /mnt/ceph
+    sudo mount -t ceph josemlp-ubuntu:/ /mnt/ceph
+
+    
+    
 
     
     
