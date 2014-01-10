@@ -362,20 +362,23 @@ _Nos avisa de que el archivo contiene información sensible, y que debemos borra
 Para subir todas las capturas de una forma rápida:
 
 ```
-        #!/bin/bash
-        #Subir capturas Azure.
-        
-         taper=$1
-         directorio=$2
-         
-         cd $directorio
-         for i in $( ls  ); 
-             do
-                azure storage blob upload ./$i $taper $i                 
-             done
+    #!/bin/bash
+    
+    #Subir capturas Azure.
+    
+     taper=$1
+     directorio=$2
+     cuenta=$3
+     
+     cd $directorio
+     for i in $( ls  ); 
+         do
+            azure storage blob upload ./$i $taper $i                 
+            echo http://$3.blob.core.windows.net/$1/$i
+         done
 ```
 
-	./subirAzure.sh tapercapt ./capt/
+	./subirAzure.sh tapercapt ./capt/ josemlp
 
 ![](http://pix.toile-libre.org/upload/original/1389380193.png)
 
