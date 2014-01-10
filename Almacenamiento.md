@@ -396,7 +396,7 @@ Para subir todas las capturas de una forma rápida:
 [http://josemlp.blob.core.windows.net/tapercapt/Selección_054.png](http://josemlp.blob.core.windows.net/tapercapt/Selección_054.png)
 
 
-Por ultimo voy a subir al otro taper un documento html con este documento.
+###Por ultimo voy a subir al otro taper un documento html con este documento.
 
-##[http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html](http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html)
+####[http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html](http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html)
 
