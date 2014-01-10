@@ -200,7 +200,12 @@ Hay que instalar ```sudo apt-get install xfsprogs``` y ```sudo apt-get install b
     
     ![](http://pix.toile-libre.org/upload/original/1389350365.png)
     
-    
+### Ejercicio 5   
+ *Instalar ceph en tu sistema operativo.*
+ 
+ 	sudo apt-get install ceph-mds
+ 
+ ![](http://pix.toile-libre.org/upload/original/1389351945.png)
     
     
     
