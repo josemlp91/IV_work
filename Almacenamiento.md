@@ -297,6 +297,58 @@ Probemos los distintos comandos:
  
  ![](http://pix.toile-libre.org/upload/original/1389368389.png)
     
+###Ejercicios 8
+Tras crear la cuenta de Azure, instalar las herramientas de línea de órdenes (Command line interface, cli) del mismo y configurarlas con la cuenta Azurecorrespondiente.
 
+[Instrucciones Windows Azure CLI ](https://github.com/WindowsAzure/azure-sdk-tools-xplat/blob/master/README.md#windows-azure-cli-tool-for-windows-mac-and-linux)
+
+Seguimos los pasos:
+
+1)
+
+    git clone https://github.com/WindowsAzure/azure-sdk-tools-xplat.git
+    cd ./azure-sdk-tools-xplat
+    npm install 
+
+2)
+
+	npm install -g azure-cli
     
+3) 
+	
+    echo '. <(azure --completion)' >> .zshrc
+    azure --completion >> ~/azure.completion.sh
+	echo 'source ~/azure.completion.sh' >> .bash_profile
     
+4)
+
+	azure account download
+    
+![](http://pix.toile-libre.org/upload/original/1389371232.png)
+![](http://pix.toile-libre.org/upload/original/1389371372.png)
+
+	azure account import [file]
+    
+![](http://pix.toile-libre.org/upload/original/1389371528.png)
+
+_Nos avisa de que el archivo contiene información sensible, y que debemos borrarlo._
+
+	rm Azpad245WCG5647-1-10-2014-credentials.publishsettings 
+.
+
+	azure account list
+![](http://pix.toile-libre.org/upload/original/1389373231.png)
+	
+    
+    azure account storage create josemlp
+
+![](http://pix.toile-libre.org/upload/original/1389373689.png)
+
+	azure account storage keys list josemlp
+    
+![](http://pix.toile-libre.org/upload/original/1389375609.png)
+	
+
+
+
+
