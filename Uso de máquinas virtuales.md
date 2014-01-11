@@ -97,7 +97,23 @@ Por tanto voy a utilizar VMWare Player ya que se encuntra instalado en mi sistem
 ![](http://pix.toile-libre.org/upload/original/1389447718.png)
 
 
+###Ejercicio 3:
+Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual simplemente con
 
 
+###Ejercicio 4:
+Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh.
+
+Existe una distribución de Ubuntu que ya incorpora el entorno LXDE, se puede descargar de:
+
+[http://cdimage.ubuntu.com/lubuntu/releases/13.10/release/lubuntu-13.10-desktop-amd64.iso](http://cdimage.ubuntu.com/lubuntu/releases/13.10/release/lubuntu-13.10-desktop-amd64.iso)
+
+	qemu-img create -f qcow2 -o preallocation=metadata Lubuntu-hdd.img 8G
+
+Una vez creado el disco duro virtual procedo como en el _ejercicio 2_, utilizando **VMM**
+
+Aqui vemos la maquina funcionando y una terminal que muestra una conexion ssh hacia ella.
+
+![](http://pix.toile-libre.org/upload/original/1389460604.png)
 
 
