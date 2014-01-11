@@ -405,6 +405,6 @@ Para subir todas las capturas de una forma rápida:
 
 ####[http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html](http://josemlp.blob.core.windows.net/taperhtml/Almacenamiento.html)
 
-###Ejercicios 10: 
+##Ejercicios 10: 
 
-##Por acabar
+###Por acabar
