@@ -1,5 +1,5 @@
 #Virtualización del almacenamiento
-===========================================
+______________________
 
 ###Ejercicio 1:
 _¿Cómo tienes instalado tu disco duro? ¿Usas particiones? ¿Volúmenes lógicos?_
