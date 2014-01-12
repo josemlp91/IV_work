@@ -64,7 +64,7 @@ Con ``` -m 2048 -smp 3```: configuramos la memoria ram y el numero de procesador
 
 A pesar de arrancar con esta configuración el sistema es demasiado lento como para realizar una isntalación, así que voy a probar 
 
- ####Configurar VMM
+####Configurar VMM
  
  ![](http://pix.toile-libre.org/upload/original/1389438285.png)
  
@@ -82,7 +82,7 @@ Ya podemos arrancar directamente usnado una orden tal cual:
 	sudo qemu-system-x86_64 -boot order=c -drive file=./VirtualMachines/ElementaryOS-hdd.img,if=virtio
 
 
-- ####Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels
+####Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels
 
 Como ya comente  en un issue VirtualBox me ha dejado de funcionar mostrandome este error:
 
