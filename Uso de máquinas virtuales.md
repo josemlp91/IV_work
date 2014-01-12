@@ -1,7 +1,7 @@
 #Uso de máquinas virtuales
 ____________
 ###Ejercicio 1:
-*Instalar los paquetes necesarios para usar KVM. Se pueden seguir estas instrucciones. Ya lo hicimos en el primer tema, pero volver a comprobar si nuestro sistema está preparado para ejecutarlo o hay que conformarse con la paravirtualización.*
+####*Instalar los paquetes necesarios para usar KVM. Se pueden seguir estas instrucciones. Ya lo hicimos en el primer tema, pero volver a comprobar si nuestro sistema está preparado para ejecutarlo o hay que conformarse con la paravirtualización.*
 
 	egrep '^flags.*(vmx|svm)' /proc/cpuinfo
  o
@@ -27,7 +27,7 @@ Actualizamos el sistema:
     
 
 ###Ejercicio 2:
-*Crear varias máquinas virtuales con algún sistema operativo libre, Linux o BSD. Si se quieren distribuciones que ocupen poco espacio con el objetivo principalmente de hacer pruebas se puede usar CoreOS (que sirve como soporte para Docker) GALPon Minino, hecha en Galicia para el mundo, Damn Small Linux, SliTaz (que cabe en 35 megas) y ttylinux (basado en línea de órdenes solo).*
+#####*Crear varias máquinas virtuales con algún sistema operativo libre, Linux o BSD. Si se quieren distribuciones que ocupen poco espacio con el objetivo principalmente de hacer pruebas se puede usar CoreOS (que sirve como soporte para Docker) GALPon Minino, hecha en Galicia para el mundo, Damn Small Linux, SliTaz (que cabe en 35 megas) y ttylinux (basado en línea de órdenes solo).*
 
 	sudo modprobe kvm-intel
     
@@ -82,7 +82,7 @@ Ya podemos arrancar directamente usnado una orden tal cual:
 	sudo qemu-system-x86_64 -boot order=c -drive file=./VirtualMachines/ElementaryOS-hdd.img,if=virtio
 
 
-###Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels
+- ####Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels
 
 Como ya comente  en un issue VirtualBox me ha dejado de funcionar mostrandome este error:
 
@@ -98,11 +98,13 @@ Por tanto voy a utilizar VMWare Player ya que se encuntra instalado en mi sistem
 
 
 ###Ejercicio 3:
-Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual simplemente con
+####*Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual*
+
+#####Por terminar
 
 
 ###Ejercicio 4:
-Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh.
+####*Crear una máquina virtual Linux con 512 megas de RAM y entorno gráfico LXDE a la que se pueda acceder mediante VNC y ssh.*
 
 Existe una distribución de Ubuntu que ya incorpora el entorno LXDE, se puede descargar de:
 
@@ -116,4 +118,52 @@ Aqui vemos la maquina funcionando y una terminal que muestra una conexion ssh ha
 
 ![](http://pix.toile-libre.org/upload/original/1389460604.png)
 
+
+
+###Ejercicio 5:
+#####*Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.*
+
+	azure vm image list
+
+![](http://pix.toile-libre.org/upload/original/1389464081.png)
+
+Podeis consultar todas las imagenes en:   [Documento Imagenes Azure](enlace)
+
+Vamos a instalar Ubuntu 14.04 Server de 30 GB, que esta recien publicado:
+
+	azure vm image show b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140111-en-us-30GB
+
+![](http://pix.toile-libre.org/upload/original/1389465360.png)
+
+![](http://pix.toile-libre.org/upload/original/1389466503.png)
+
+####Instalamos nginx
+
+	sudo apt-get install nginx
+
+Recorgemos que los html nginx los almacena por defecto en:
+	
+    /usr/share/nginx/html
+    
+ ![](http://pix.toile-libre.org/upload/original/1389468804.png)
+ 
+ ###Ejercicio 6:
+ #####*Usar juju para hacer el ejercicio anterior.*
+ 
+ Siguiendo los pasos del siguiente manual, no consigo terminar la configuración de forma correcta.
+ [https://juju.ubuntu.com/docs/config-azure.html](https://juju.ubuntu.com/docs/config-azure.html)
+
+
+###Ejercicio 7:
+#####*Instalar una máquina virtual Ubuntu 12.04 para el hipervisor que tengas instalado.*
+
+	sudo vmbuilder kvm ubuntu --suite precise --flavour server -o ./virtmanager/ --hostname josemlp --domain josemlp
+
+![](http://pix.toile-libre.org/upload/original/1389519197.png)
+
+	sudo qemu-system-x86_64 -hda /home/josemlp/ubuntu-kvm/tmpO2zm3N.qcow2
+    
+  ![](http://pix.toile-libre.org/upload/original/1389519377.png)
+  
+  Para conectar con vinagre tal como se decia en [Problema con VNC y KVM/QEMU (#97)](Problema con VNC y KVM/QEMU (#97)), debemos conectarnos con la ip del interfaz ```virbr0 ``` en mi caso  192.168.122.1:5901"
 

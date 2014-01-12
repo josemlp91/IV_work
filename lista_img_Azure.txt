@@ -1,0 +1,199 @@
+info:    Executing command vm image list
+info:    Fetching VM images
+data:    Name                                                                                                                Category                                   OS     
+data:    ------------------------------------------------------------------------------------------------------------------  -----------------------------------------  -------
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.2-x64-v5.8.8.1                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8                                                  RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8.5                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8.6                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8.7                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8.8                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.3-x64-v5.8.8.9                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.4-x64-v13.4                                                   RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.4-x64-v13.5.0.1                                               RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.4-x64-v13.5.0.2                                               RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-CentOS-6.5-x64-v13.5.2                                                 RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.4                                                 RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.5.0.1                                             RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.5.2                                               RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v5.8.8                                                RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v5.8.8.5                                              RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v5.8.8.7                                              RightScale with Linux                      Linux  
+data:    0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v5.8.8.8                                              RightScale with Linux                      Linux  
+data:    0c0083a6d9a24f2d91800e52cad83950__JDK-1.6.0_65-1113-Win                                                             Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__JDK-1.7.0_45-1113-Win                                                             Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Oracle-Database-12.1.0.1.0-1113-EE-Win                                            Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Oracle-Database-12.1.0.1.0-1113-SE-Win                                            Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Oracle-Database-12.1.0.1.0-EE-WebLogic-12.1.2.0-EE-JDK-1.7.0_45-1113-Win          Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Oracle-Database-12.1.0.1.0-SE-WebLogic-12.1.2.0-SE-JDK-1.7.0_45-1113-Win          Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__WebLogic-12.1.2.0-EE-JDK-1.7.0_45-1113-Win                                        Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__WebLogic-12.1.2.0-SE-JDK-1.7.0_45-1113-Win                                        Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Weblogic-10.3.6-EE-JDK-1.7.0_45-1113-Win                                          Microsoft Corporation                      Windows
+data:    0c0083a6d9a24f2d91800e52cad83950__Weblogic-10.3.6-SE-JDK-1.7.0_45-1113-Win                                          Microsoft Corporation                      Windows
+data:    2cdc6229df6344129ee553dd3499f0d3__BizTalk-Server-2013-Enterprise                                                    Microsoft BizTalk Server Group             Windows
+data:    2cdc6229df6344129ee553dd3499f0d3__BizTalk-Server-2013-Evaluation                                                    Microsoft BizTalk Server Group             Windows
+data:    2cdc6229df6344129ee553dd3499f0d3__BizTalk-Server-2013-Standard                                                      Microsoft BizTalk Server Group             Windows
+data:    3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20131018-enus                                      Microsoft Windows Server Essentials Group  Windows
+data:    3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20131127-enus                                      Microsoft Windows Server Essentials Group  Windows
+data:    3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20131217-enus                                      Microsoft Windows Server Essentials Group  Windows
+data:    5112500ae3b842c8b9c604889f8753c3__OpenLogic-CentOS-63APR20130415                                                    OpenLogic                                  Linux  
+data:    a699494373c04fc0bc8f2bb1389d6106__Win2K8R2SP1-Datacenter-201310.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Win2K8R2SP1-Datacenter-201311.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Win2K8R2SP1-Datacenter-201312.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-Datacenter-201310.01-en.us-127GB.vhd                          Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-Datacenter-201311.01-en.us-127GB.vhd                          Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-Datacenter-201312.01-en.us-127GB.vhd                          Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-R2-201310.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-R2-201311.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-R2-201312.01-en.us-127GB.vhd                                  Microsoft Windows Server Group             Windows
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20121218-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130225-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130325-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130415-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130516-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130527-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130603-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_2-LTS-amd64-server-20130624-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20130827-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20130909-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20130916.1-en-us-30GB                             Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20131003-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20131024-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20131111-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20131114-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_3-LTS-amd64-server-20131205-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20121218-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130227-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130414-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130526-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130602-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130616-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130707-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130821-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130908-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20130929-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20131023-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20131110-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20131113-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20131211-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_10-amd64-server-20140108-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130423-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130501-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130525-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130601-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130615-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130706-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130820-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130824-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130907-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20130928-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131022-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131112-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131116-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131123-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131203-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20131214-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_04-amd64-server-20140107-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20130808-alpha3-en-us-30GB                              Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20130905-beta1-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20130925-beta2-en-us-30GB                               Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20131015-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20131113-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20131204-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20131215-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-13_10-amd64-server-20140108-en-us-30GB                                     Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-precise-12_04_3-LTS-amd64-server-20131125-en-us-30GB           Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-precise-12_04_3-LTS-amd64-server-20131226-en-us-30GB           Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-precise-12_04_3-LTS-amd64-server-20140102-en-us-30GB           Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-precise-12_04_3-LTS-amd64-server-20140106-en-us-30GB           Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-precise-12_04_3-LTS-amd64-server-20140109-en-us-30GB           Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-quantal-12_10-amd64-server-20131225-en-us-30GB                 Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-quantal-12_10-amd64-server-20131229-en-us-30GB                 Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-quantal-12_10-amd64-server-20140101-en-us-30GB                 Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-quantal-12_10-amd64-server-20140105-en-us-30GB                 Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-quantal-12_10-amd64-server-20140108-en-us-30GB                 Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-raring-13_04-amd64-server-20131231-en-us-30GB                  Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-raring-13_04-amd64-server-20140104-en-us-30GB                  Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-raring-13_04-amd64-server-20140107-en-us-30GB                  Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-saucy-13_10-amd64-server-20131225-en-us-30GB                   Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-saucy-13_10-amd64-server-20131229-en-us-30GB                   Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-saucy-13_10-amd64-server-20140105-en-us-30GB                   Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-saucy-13_10-amd64-server-20140108-en-us-30GB                   Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140108-en-us-30GB              Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140109-en-us-30GB              Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140110-en-us-30GB              Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140110.1-en-us-30GB            Canonical                                  Linux  
+data:    b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04-LTS-amd64-server-20140111-en-us-30GB              Canonical                                  Linux  
+data:    b4590d9e3ed742e4a1d46e5424aa335e__SUSE-Linux-Enterprise-Server-11-SP2-v201                                          SUSE                                       Linux  
+data:    b4590d9e3ed742e4a1d46e5424aa335e__SUSE-Linux-Enterprise-Server-11-SP3-v201                                          SUSE                                       Linux  
+data:    b4590d9e3ed742e4a1d46e5424aa335e__openSUSE-12.3-v121                                                                SUSE                                       Linux  
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-iis75-v5.8.8                                    RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-iis75-v5.8.8.11                                 RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-sqlsvr2012-v5.8.8                               RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-sqlsvr2012-v5.8.8.1                             RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-sqlsvr2012-v5.8.8.12                            RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-sqlsvr2012-v5.8.8.15                            RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-v5.8.8                                          RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-SP1-x64-v5.8.8.11                                       RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-iis7.5-v13.4.12.2                                   RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-iis7.5-v13.5                                        RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2012-v13.4.3.1                                RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2012-v13.5.1                                  RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2012ent-v13.4.3.1                             RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2012ent-v13.5                                 RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2k8r2-v13.5                                   RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-sqlsvr2k8r2ent-v13.5                                RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-v13.4.12.2                                          RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2008R2-x64-v13.5                                               RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-iis8-v13.4.12.2                                       RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-iis8-v13.5                                            RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-iis8-v5.8.8.12                                        RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-sqlsvr2012-v13.5                                      RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-sqlsvr2012ent-v13.5                                   RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-v13.4.12.2                                            RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-v13.5                                                 RightScale with Windows Server             Windows
+data:    bd507d3a70934695bc2128e3e5a255ba__RightImage-Windows-2012-x64-v5.8.8.12                                             RightScale with Windows Server             Windows
+data:    c290a6b031d841e09f2da759bbabe71f__Oracle-Database-121010.v1-EE-Lnx                                                  Oracle                                     Linux  
+data:    c290a6b031d841e09f2da759bbabe71f__Oracle-Database-121010.v3-SE-Lnx                                                  Oracle                                     Linux  
+data:    c290a6b031d841e09f2da759bbabe71f__Oracle-Linux-6                                                                    Oracle                                     Linux  
+data:    c290a6b031d841e09f2da759bbabe71f__WebLogic-Server-12c.v1-Lnx                                                        Oracle                                     Linux  
+data:    c6e0f177abd8496e934234bd27f46c5d__SharePoint-2013-Trial-1-7-2014                                                    Microsoft SharePoint Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2008R2SP2-Enterprise-CY13SU04-SQL2008-SP2-10.50.4021.0       Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2008R2SP2-Standard-CY13SU04-SQL2008-SP2-10.50.4021.0         Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-CU4-11.0.3368.0-Enterprise-ENU-Win2012               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-CU4-11.0.3368.0-Enterprise-ENU-Win2K8R2              Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-CU4-11.0.3368.0-Standard-ENU-Win2012                 Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-Enterprise-CY13SU04-SQL11-SP1-CU3-11.0.3350.0-B      Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-Enterprise-CY13SU04-SQL2012-SP1-11.0.3350.0-Win2012  Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-Standard-CY13SU04-SQL11-SP1-CU3-11.0.3350.0-B        Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-Standard-CY13SU04-SQL2012-SP1-11.0.3350.0-Win2012    Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__Microsoft-SQL-Server-2012SP1-Web-CY13SU04-SQL11-SP1-CU3-11.0.3350.0               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Enterprise-ENU-Win2K8R2-CY13SU10            Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Enterprise-ENU-Win2K8R2-CY13SU12            Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Standard-ENU-Win2K8R2-CY13SU10              Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Standard-ENU-Win2K8R2-CY13SU12              Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Web-ENU-Win2K8R2                            Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Web-ENU-Win2K8R2-CY13SU10                   Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2008R2SP2-GDR-10.50.4021.0-Web-ENU-Win2K8R2-CY13SU12                   Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-DataWarehousing-ENU-WS2012                     Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-DataWarehousing-ENU-WS2012-CY13SU12            Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Enterprise-ENU-WS2008R2-CY13SU10               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Enterprise-ENU-Win2012                         Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Enterprise-ENU-Win2012-CY13SU10                Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Enterprise-ENU-Win2012-CY13SU12                Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Enterprise-ENU-Win2K8R2-CY13SU12               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Standard-ENU-WS2008R2                          Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Standard-ENU-Win2012-CY13SU10                  Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Standard-ENU-Win2012-CY13SU12                  Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Standard-ENU-Win2K8R2-CY13SU10                 Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Standard-ENU-Win2K8R2-CY13SU12                 Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Web-ENU-WS2008R2                               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Web-ENU-WS2008R2-CY13SU10                      Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2012SP1-CU5-11.0.3373.0-Web-ENU-Win2K8R2-CY13SU12                      Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-12.0.1524.0-DataWarehousing-ENU-WS2012                        Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-12.0.1524.0-DataWarehousing-ENU-WS2012-CY13SU12               Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-CU1-12.0.1736.0-Evaluation-ENU-WS2012                         Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-CU1-12.0.1736.0-Evaluation-ENU-WS2012-CY13SU12                Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-CU1-12.0.1736.0-Evaluation-ENU-WS2012R2                       Microsoft SQL Server Group                 Windows
+data:    fb83b3509582419d99629ce476bcb5c8__SQL-Server-2014CTP2-CU1-12.0.1736.0-Evaluation-ENU-WS2012R2-CY13SU12              Microsoft SQL Server Group                 Windows
+info:    vm image list command OK
