@@ -2,7 +2,7 @@
 ______________________
 
 ###Ejercicio 1:
-_¿Cómo tienes instalado tu disco duro? ¿Usas particiones? ¿Volúmenes lógicos?_
+####_¿Cómo tienes instalado tu disco duro? ¿Usas particiones? ¿Volúmenes lógicos?_
 
 Para consultar todos los datos de mi HDD y de sus  particiones he utilizado los siguiente comandos:
 
@@ -62,11 +62,11 @@ _Si tienes acceso en tu escuela o facultad a un ordenador común para las práct
 Completar cuando este en la escuela.
 
 
-_Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes._
+####_Buscar ofertas SAN comerciales y comparar su precio con ofertas locales (en el propio ordenador) equivalentes._
 
-<<<<<<< HEAD
+
 ###Ejercicio 2
-Usar FUSE para acceder a recursos remotos como si fueran ficheros locales. Por ejemplo, sshfs para acceder a ficheros de una máquina virtual invitada o de la invitada al anfitrión.
+####Usar FUSE para acceder a recursos remotos como si fueran ficheros locales. Por ejemplo, sshfs para acceder a ficheros de una máquina virtual invitada o de la invitada al anfitrión.
 
 Dispongo de Ubuntu Server preinstalado en una máquina virtual VirtualBox, ademas ya tiene configurado el servicio SSH, y comparto mi clave pública con dicho servidor.
 
@@ -131,7 +131,7 @@ Como vemos el disco virtual va a tener el contenido de /home de la maquina virtu
 Ademas probamos a editar los archivos y vemos como las escrituras tambien se producen de forma correcta.
 
 ###Ejercicio 3
-*Crear imágenes con estos formatos (y otros que se encuentren tales como VMDK) y manipularlas a base de montarlas o con cualquier otra utilidad que se encuentre.*
+####*Crear imágenes con estos formatos (y otros que se encuentren tales como VMDK) y manipularlas a base de montarlas o con cualquier otra utilidad que se encuentre.*
 
 Para crear imagenes en formato raw uso:
 	
@@ -172,7 +172,7 @@ Voy a montar la última imagen creada en ```VMWare Player```.
 ![vmware](http://pix.toile-libre.org/upload/original/1389348369.png)
 
 ###Ejercicio 4
-*Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema.*
+####*Crear uno o varios sistema de ficheros en bucle usando un formato que no sea habitual (xfs o btrfs) y comparar las prestaciones de entrada/salida entre sí y entre ellos y el sistema de ficheros en el que se encuentra, para comprobar el overhead que se añade mediante este sistema.*
 
 Primeramente creamos las imagenes:
 
@@ -201,7 +201,7 @@ Hay que instalar ```sudo apt-get install xfsprogs``` y ```sudo apt-get install b
     ![](http://pix.toile-libre.org/upload/original/1389350365.png)
     
 ### Ejercicio 5   
- *Instalar ceph en tu sistema operativo.*
+#### *Instalar ceph en tu sistema operativo.*
  
  	sudo apt-get install ceph-mds
 
@@ -211,7 +211,7 @@ Hay que instalar ```sudo apt-get install xfsprogs``` y ```sudo apt-get install b
     
     
 ### Ejercicio 6
-*Crear un dispositivo ceph usando BTRFS o XFS
+####*Crear un dispositivo ceph usando BTRFS o XFS
 Avanzado Usar varios dispositivos en un nodo para distribuir la carga.*
 
 Creamos los directorios:
@@ -271,23 +271,23 @@ Creamos los puntos de montaje, y lo montamos
 
     
 ###Ejercicio 7:
-*Almacenar objetos y ver la forma de almacenar directorios completos usando ceph y rados.*
+####*Almacenar objetos y ver la forma de almacenar directorios completos usando ceph y rados.*
 
 Probemos los distintos comandos:
  
- ####Crear pool:
+ #####Crear pool:
  
 	sudo rados mkpool esa-piscina
     
- ####Listar pools creadas:
+ #####Listar pools creadas:
     
     rados lspools
     
- ####Ver contenido pools:   
+ #####Ver contenido pools:   
     
     sudo rados df
     
-####Introducir contenido en pool:
+#####Introducir contenido en pool:
 
 	rados put -p prueba-piscina objeto archivo.img
     
@@ -298,7 +298,7 @@ Probemos los distintos comandos:
  ![](http://pix.toile-libre.org/upload/original/1389368389.png)
     
 ###Ejercicios 8
-Tras crear la cuenta de Azure, instalar las herramientas de línea de órdenes (Command line interface, cli) del mismo y configurarlas con la cuenta Azurecorrespondiente.
+####*Tras crear la cuenta de Azure, instalar las herramientas de línea de órdenes (Command line interface, cli) del mismo y configurarlas con la cuenta Azurecorrespondiente.*
 
 [Instrucciones Windows Azure CLI ](https://github.com/WindowsAzure/azure-sdk-tools-xplat/blob/master/README.md#windows-azure-cli-tool-for-windows-mac-and-linux)
 
@@ -350,7 +350,7 @@ _Nos avisa de que el archivo contiene información sensible, y que debemos borra
 	
 
 ###Ejercicios 9:
-*Crear varios contenedores en la cuenta usando la línea de órdenes para ficheros de diferente tipo y almacenar en ellos las imágenes en las que capturéis las pantallas donde se muestre lo que habéis hecho.*
+####*Crear varios contenedores en la cuenta usando la línea de órdenes para ficheros de diferente tipo y almacenar en ellos las imágenes en las que capturéis las pantallas donde se muestre lo que habéis hecho.*
 
 	azure storage container create tapercapt -p blob
     azure storage container create taperhtml -p blob
@@ -407,4 +407,4 @@ Para subir todas las capturas de una forma rápida:
 
 ##Ejercicios 10: 
 
-###Por acabar
+####Por acabar
