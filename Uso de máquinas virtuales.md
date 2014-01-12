@@ -118,7 +118,7 @@ Aqui vemos la maquina funcionando y una terminal que muestra una conexion ssh ha
 
 ![](http://pix.toile-libre.org/upload/original/1389460604.png)
 
-
+ Para conectar con vinagre tal como se decia en [Problema con VNC y KVM/QEMU (#97)](Problema con VNC y KVM/QEMU (#97)), debemos conectarnos con la ip del interfaz ```virbr0 ``` en mi caso  192.168.122.1:5901"
 
 ###Ejercicio 5:
 #####*Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.*
@@ -165,5 +165,5 @@ Recorgemos que los html nginx los almacena por defecto en:
     
   ![](http://pix.toile-libre.org/upload/original/1389519377.png)
   
-  Para conectar con vinagre tal como se decia en [Problema con VNC y KVM/QEMU (#97)](Problema con VNC y KVM/QEMU (#97)), debemos conectarnos con la ip del interfaz ```virbr0 ``` en mi caso  192.168.122.1:5901"
+ 
 
