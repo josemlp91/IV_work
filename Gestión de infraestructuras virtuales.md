@@ -2,6 +2,7 @@
 #Gestión de infraestructuras virtuales
 _____________
 
+##Ejercicio 1
 ###Instalar chef en la máquina virtual que vayamos a usar.
 
 	sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems
@@ -13,7 +14,8 @@ _____________
     
 ![](http://pix.toile-libre.org/upload/original/1391033801.png)
     
-    
+ 
+##Ejercicio 2
 ###Crear una receta para instalar nginx, tu editor favorito y algún directorio y fichero que uses de forma habitual.
 
 	
@@ -99,6 +101,7 @@ Ejecutamos:
 ![](http://pix.toile-libre.org/upload/original/1391039372.png)
     
 
+##Ejercicio 3
 ###Escribir en YAML la siguiente estructura de datos en JSON
 
     { uno: "dos", tres: [ 4, 5, "Seis", { siete: 8, nueve: [ 10, 11 ] } ] }
@@ -113,6 +116,11 @@ Ejecutamos:
         - siete:8
         - nueve:[10,11]
         
+
+##Ejercicio 4
+###Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual Azure (o una máquina virtual local) usando ansible.
+
+
 
 
 
