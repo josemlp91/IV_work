@@ -127,7 +127,7 @@ Aqui vemos la maquina funcionando y una terminal que muestra una conexion ssh ha
 
 ![](http://pix.toile-libre.org/upload/original/1389464081.png)
 
-Podeis consultar todas las imagenes en:   [Documento Imagenes Azure](enlace)
+Podeis consultar todas las imagenes en:   [Documento Imagenes Azure](https://github.com/josemlp91/IV_work/blob/master/lista_img_Azure.txt)
 
 Vamos a instalar Ubuntu 14.04 Server de 30 GB, que esta recien publicado:
 
