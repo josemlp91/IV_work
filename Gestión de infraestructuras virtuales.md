@@ -12,7 +12,7 @@ _____________
     exit
     
     
-![](http://pix.toile-libre.org/upload/original/1391033801.png)
+
     
  
 ##Ejercicio 2
@@ -180,7 +180,7 @@ Necesitamos crear un playbooks por ejemplo ```ansibledai.yml```
       command: pip install web.py mako pymongo lxml feedparser tweepy
     - name: Desplegar aplicación
       command: chdir=/home/josemlp/dai/App_dai nohup 
-               python practica.py 80 &
+               python practica.py 8080 &
       async: 50
       poll: 0
 ~~~
