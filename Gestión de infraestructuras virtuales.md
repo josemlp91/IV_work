@@ -193,5 +193,17 @@ Ya esta la aplicación funcionando y podemos acceder:
 
 ![](http://pix.toile-libre.org/upload/original/1391191439.png)
   
-  
-  
+##Ejercicio 5  
+###Instalar una máquina virtual Debian usando Vagrant y conectar con ella.  
+
+Instalamos vagrant:
+
+	sudo apt-get install vagrant
+
+Descargamos una maquina vagrat, en mi caso uso un Debian 7 minimal:
+    
+    vagrant box add debian7 https://www.dropbox.com/s/23gupgb0xompvkm/Wheezy64.box?dl=1
+	
+    vagrant init debian7
+    
+    vagrant ssh
