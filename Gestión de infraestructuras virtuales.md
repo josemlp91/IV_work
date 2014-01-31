@@ -120,7 +120,45 @@ Ejecutamos:
 ##Ejercicio 4
 ###Desplegar los fuentes de la aplicación de DAI o cualquier otra aplicación que se encuentre en un servidor git público en la máquina virtual Azure (o una máquina virtual local) usando ansible.
 
+Ya tenemos una maquina virtual creada en Azure.
+![](http://pix.toile-libre.org/upload/original/1391183401.png)
 
+Entramos en ella usando ssh:
+
+	ssh ubuntu-dai-iv.cloudapp.net
+    
+####Configuramos claves rsa para ssh:
+
+Escribimos en la máquina de Azure:
+	ssh-keygen -t rsa -C "josemlp.montefrio@gmail.com"
+    
+Compartimos clave rsa publica con máquina anfitrion:
+
+	ssh-copy-id josemlp@ubuntu-dai-iv.cloudapp.net
+
+.
+
+Creamos fichero inventario con los host que vamos a controlar
+    
+	echo -e "[azure] \n ubuntu-dai-iv.cloudapp.net" > ~/ansible_hosts
+	export ANSIBLE_HOSTS=~/ansible_hosts
+    
+
+
+	
+	
+![](http://pix.toile-libre.org/upload/original/1391184871.png)
+
+Desplegamos fuentes desde git:
+
+	ansible azure -m git -a "repo=https://github.com/josemlp91/practica3IV.git dest=~/dai version=HEAD"
+
+
+![](http://pix.toile-libre.org/upload/original/1391186144.png)
+
+Verificamos que todas las fuentes han sido descargadas en las máquinas remotas:
+
+![](http://pix.toile-libre.org/upload/original/1391186254.png)
 
 
 
