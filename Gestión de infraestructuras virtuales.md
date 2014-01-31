@@ -160,6 +160,38 @@ Verificamos que todas las fuentes han sido descargadas en las máquinas remotas:
 
 ![](http://pix.toile-libre.org/upload/original/1391186254.png)
 
+##Ejercicio 5
+###Desplegar la aplicación de DAI con todos los módulos necesarios usando un playbook de Ansible.
+
+Necesitamos crear un playbooks por ejemplo ```ansibledai.yml```
+~~~
+---
+- hosts: azure
+  sudo: yes
+  tasks:
+    - name: Python python-pip y build-essential EasyInstall
+      apt: name=build-essential state=present
+      apt: name=python-dev state=present
+      apt: name=python-setuptools state=present
+      apt: name=python-pip state=present
+    - name: MongoDB
+      apt: name=mongodb-server state=present
+    - name: Módulos de Python 
+      command: pip install web.py mako pymongo lxml feedparser tweepy
+    - name: Desplegar aplicación
+      command: chdir=/home/josemlp/dai/App_dai nohup 
+               python practica.py 80 &
+      async: 50
+      poll: 0
+~~~
+Ejecutamos playbook: ```ansible-playbook ansibledai.yml```
 
 
+![](http://pix.toile-libre.org/upload/original/1391191240.png)
+
+Ya esta la aplicación funcionando y podemos acceder:
+
+![](http://pix.toile-libre.org/upload/original/1391191439.png)
+  
+  
   
