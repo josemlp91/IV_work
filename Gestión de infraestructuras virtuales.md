@@ -227,9 +227,7 @@ Realizo un ejemplo de instalación personalizada:
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
     
-    Vagrant.configure("2") do |config|
-    
-    
+    Vagrant.configure("2") do |config|        
       config.vm.box = "ubuntu"
     
       config.vm.provision "shell",
@@ -273,15 +271,10 @@ Configuramos nuestro vagrantfile:
 		# -*- mode: ruby -*-
         # vi: set ft=ruby :
         
-        Vagrant.configure("2") do |config|
-        
-          
-        
+        Vagrant.configure("2") do |config|      
           config.vm.box = "ubuntu"
-        
           config.vm.network :public_network,:bridge=>"eth0"
-        
-        
+       
         end
         
 ~~~
