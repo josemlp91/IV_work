@@ -130,6 +130,7 @@ Entramos en ella usando ssh:
 ####Configuramos claves rsa para ssh:
 
 Escribimos en la máquina de Azure:
+
 	ssh-keygen -t rsa -C "josemlp.montefrio@gmail.com"
     
 Compartimos clave rsa publica con máquina anfitrion:
@@ -200,10 +201,143 @@ Instalamos vagrant:
 
 	sudo apt-get install vagrant
 
-Descargamos una maquina vagrat, en mi caso uso un Debian 7 minimal:
-    
+Descargamos una maquina vagrat, en mi caso uso un Debian 7 minimal:  
+[http://www.vagrantbox.es/](http://www.vagrantbox.es/)    
+
     vagrant box add debian7 https://www.dropbox.com/s/23gupgb0xompvkm/Wheezy64.box?dl=1
 	
     vagrant init debian7
     
+    vagrant up
+    
     vagrant ssh
+    
+    
+    http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
+    
+![](http://pix.toile-libre.org/upload/original/1391440679.png)
+
+![](http://pix.toile-libre.org/upload/original/1391441119.png)
+
+![](http://pix.toile-libre.org/upload/original/1391441162.png)
+
+Realizo un ejemplo de instalación personalizada:
+
+~~~    
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    
+    Vagrant.configure("2") do |config|
+    
+    
+      config.vm.box = "ubuntu"
+    
+      config.vm.provision "shell",
+        inline:"sudo apt-get install htop"    
+    end
+~~~
+
+Vemos que efectivamente se ha instalado correctamente:
+
+![](http://pix.toile-libre.org/upload/original/1391594531.png)
+
+
+##Ejercicio 6
+###Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica
+
+~~~    
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    
+    Vagrant.configure("2") do |config|
+    
+    
+      config.vm.box = "ubuntu"
+    
+      config.vm.provision "shell",
+        inline: "sudo apt-get update && sudo apt-get install -y nginx && sudo service nginx restart
+        && sudo service nginx status"
+    end
+~~~
+
+![](http://pix.toile-libre.org/upload/original/1391595653.png)
+
+##Ejercicio 7
+###Configurar tu máquina virtual usando vagrant con el provisionador ansible
+
+Lo primero que tenemos que hacer es hacer una configuración de red que nos permita el acceso ssh desde el exterior,  y esta es la parte del ejercicio que más problemas me ha dado, utilizo una intezfaz puente.
+
+Configuramos nuestro vagrantfile:
+
+~~~
+		# -*- mode: ruby -*-
+        # vi: set ft=ruby :
+        
+        Vagrant.configure("2") do |config|
+        
+          
+        
+          config.vm.box = "ubuntu"
+        
+          config.vm.network :public_network,:bridge=>"eth0"
+        
+        
+        end
+        
+~~~
+
+Entramos en la máquina via ``vagrant ssh`` 
+
+![](http://pix.toile-libre.org/upload/original/1391603407.png)
+
+Vemos todas las IP de los adaptadores que tiene nuestra máquina virtual:
+En mi caso la que puedo utilizar para conexiones ssh es la 192.168.1.188
+
+Despues otro paso importante es cambiar la contraseña del usuario vagrant, puesto que no la conozco, y la necesitamos para hacer la conexion ssh del modo usual:
+
+	passwd vagrant
+
+Y ponemos la que nos de la gana.
+
+En la máquina anfitriona:
+
+Añadimos dicha IP a nuestro inventario:
+
+	echo -e "[vagrant] \n  vagrant@192.168.1.188 " > ~/ansible_hosts
+	export ANSIBLE_HOSTS=~/ansible_hosts
+    
+ Creamos nuestro playbook
+ 
+ ~~~
+ ---
+- hosts: vagrant
+  sudo: yes
+  tasks:
+    - name: Actualizar lista de paquetes
+      apt: update_cache=yes
+    - name: Instalar Nginx
+      apt: name=nginx state=present
+~~~
+
+Lo ejecutamos:
+
+	ansible-playbook playbook.yml
+
+
+Ya podemos ver que todo funciona perfectamente:
+
+
+![](http://pix.toile-libre.org/upload/original/1391603088.png)
+
+![](http://pix.toile-libre.org/upload/original/1391603113.png)
+
+
+
+
+
+
+
+
+
+
+    
