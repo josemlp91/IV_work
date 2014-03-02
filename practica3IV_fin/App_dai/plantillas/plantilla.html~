@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<!--Practicas de Desarrollo de Aplicaciones para Internet (DAI)
+# Copyright (C) 2013 - Jose Miguel Lopez (josemlp@correo.ugr.es)
+#    
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#   
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#   
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+ <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	  <title>Practica DAI</title>
+	 
+	  <link href="static/style.css" rel="stylesheet" type="text/css" media="screen" /> 
+	  <script src="static/js/cufon-yui.js" type="text/javascript"></script>
+	  <script src="/static/js/calibri.cufonfonts.js" type="text/javascript"></script>
+	  <script type="text/javascript">
+			Cufon.replace('.calibri_italic', { fontFamily: 'Calibri Italic', hover: true }); 
+	  </script>   
+ </head>
+
+
+
+ <body>
+
+
+<!-- Wrapper -->	 
+  <div id="wrapper">
+<!-- Logo -->	
+	 <div id="logo">
+
+<!-- Title -->	
+		<h1 class="calibri_italic"><a href="#">${Titulo}</a></h1>
+		<p class="calibri_italic">${Subtitulo}</p>
+<!-- / Title -->	
+
+<!-- Top menu -->	
+		
+<!-- / Top menu -->	
+   </div>
+<!-- / Logo -->	 
+
+
+	 <div id="subheader">
+<!-- Menu -->			
+		<div id="menu">
+			<!-- Top menu -->	
+		<ul>
+			 <li><a href="/principal">Principal</a></li>
+
+			 % if log==False:
+			 	<li><a href="/registro">Registro</a></li>
+			 %endif
+
+			 % if log==True:
+			 	<li><a href="/editar">Editar</a></li>
+			 %endif
+
+
+			 <li><a href="/principal?categoria=About">About</a></li>
+			 <li><a href="/principal?categoria=Contact">Contacto</a></li>
+    		</ul>
+<!-- / Top menu -->
+		</div>
+<!-- / Menu -->	
+
+<!-- LOGIN -->
+
+%if log==False:
+	% if reg==False:		
+			<div id="login">
+
+				<form method="POST"> 
+
+					${login.render()}
+					% if error==True:
+						<p style="text-decoration: blink;">Nombre o Pass erroneos<p>
+					
+					%endif
+					
+					% if error==False:
+						<p style="text-decoration: blink;">Entrar >></p>						
+					%endif
+				</form>
+						
+			</div>
+		 </div>
+	%endif
+
+
+%else:
+		
+		<div id="login">
+			<p id="saludo">Usuario: <em>${user}</em> <a id="cerrar" href="/cerrarsesion"><img src="/static/images/cerrar.png" WIDTH=70 HEIGHT=70 alt"cerrar sesion"/></a><p>	
+		</div>
+	</div>
+	
+%endif
+
+<!-- / LOGIN -->
+
+<!--  CATEGORIA ACTUAL -->
+	% if cateA=='Categoria-0':
+		<h1>Principal</h1>
+	%else:
+		<h1>${cateA}</h1>
+	%endif
+
+<!--/  CATEGORIA ACTUAL -->
+
+<!-- Content -->	
+	 <div id="content">
+
+<!-- Post  -->	
+	% if reg==False:
+	<%
+	p=len(losPosts)
+	%>
+		% for i in range (p):
+
+	    	<div class="post">
+
+			<h2>${losPosts[i].titulo}</h2>
+	      		<p><img class="left" src=${losPosts[i].imagen} alt="Lorem ipsum" title="Lorem ipsum" />${losPosts[i].texto1}</p>
+	      		<p class="box">${losPosts[i].textoResaltado}</p>
+	      		<p> ${losPosts[i].texto2} <a class="more" href="#">More &raquo;</a></p>
+
+	      		<div 
+	          		class="tool"><ul><li>${losPosts[i].fecha.dia}. ${losPosts[i].fecha.mes}. ${losPosts[i].fecha.agno}</li>
+	      	  		<li>From <a href="#">${losPosts[i].autor}</a></li><li>Category: <a href="#">Categoria 1</a></li></ul>
+	      		</div>
+
+	    	</div>
+
+		% endfor
+	% endif
+
+	% if reg==True:
+			<div class="post">
+				% if edit==True:
+					<h2>Editar</h2>
+				%else:
+					<h2>Registro</h2>
+	      			%endif
+	      		<form method="POST"> ${Registro.render()}</form>
+	      		
+	    		</div>	
+	% endif
+
+<!-- / Post -->	
+		</div>
+
+<!-- / Content -->		
+		
+<!-- Sidebar -->			
+	<div id="sidebar">
+		
+		 <h2>Menú</h2>
+		  <ul>
+
+		  	<%
+		  	 x=len(cate)
+		  	%>
+
+		  	% for a in range (x):
+		  		 <%
+		  		 enlace="/principal?categoria="+str(cate[a])
+		  		 %>
+    			 <li><a href=${enlace}>${cate[a]}</a></li>
+			% endfor
+
+		</ul>
+	</div>
+
+<!-- / Sidebar -->	
+
+		<div class="clear"><!-- Espacio en blanco --></div>
+
+<!-- Footer -->
+	 <div id="footer-top"></div>
+	 <div id="footer">
+		<p>&copy; 2013 <a href="#">${autor}</a> 
+
+	 <!-- / DO NOT REMOVE  -->    
+	 <div id="licencia">
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_CO"><img alt="Licencia Creative Commons" 
+           style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />
+     </div>
+     Este obra está bajo una 
+           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_CO">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported</a>
+ <!-- / DO NOT REMOVE  -->    
+    </p>
+	 </div>  
+<!-- / Footer -->	
+  </div>
+<!-- / Wrapper -->	 
+ </body>
+
+</html>

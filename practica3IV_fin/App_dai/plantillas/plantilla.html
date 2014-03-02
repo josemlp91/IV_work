@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<!--Practicas de Desarrollo de Aplicaciones para Internet (DAI)
+# Copyright (C) 2013 - Jose Miguel Lopez (josemlp@correo.ugr.es)
+#    
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#   
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#   
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+
+ <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	  <title>Practica DAI</title>
+	 
+	  <link href="static/style.css" rel="stylesheet" type="text/css" media="screen" /> 
+	  <script src="static/js/cufon-yui.js" type="text/javascript"></script>
+	  <script src="/static/js/calibri.cufonfonts.js" type="text/javascript"></script>
+	  <script type="text/javascript">
+			Cufon.replace('.calibri_italic', { fontFamily: 'Calibri Italic', hover: true }); 
+	  </script>   
+ </head>
+
+
+
+ <body>
+
+
+<!-- Wrapper -->	 
+  <div id="wrapper">
+<!-- Logo -->	
+	 <div id="logo">
+
+<!-- Title -->	
+		<h1 class="calibri_italic"><a href="#">${Titulo}</a></h1>
+		<p class="calibri_italic">${Subtitulo}</p>
+
+		<a href="https://twitter.com/josemlp91_TIC" class="twitter-follow-button" data-show-count="false" data-lang="es" data-dnt="true">Seguir a @josemlp91_TIC</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+<!-- / Title -->	
+
+<!-- Top menu -->	
+		
+<!-- / Top menu -->	
+   </div>
+<!-- / Logo -->	 
+
+
+	 <div id="subheader">
+<!-- Menu -->			
+		<div id="menu">
+			<!-- Top menu -->	
+		<ul>
+			 <li><a href="/principal">Principal</a></li>
+
+			 % if log==False:
+			 	<li><a href="/registro">Registro</a></li>
+			 %endif
+
+			 % if log==True:
+			 	<li><a href="/editar">Editar</a></li>
+				<li><a href="/datos">Datos</a></li>
+			 %endif
+
+
+			 <li><a href="/principal?categoria=About">About</a></li>
+			 <li><a href="/principal?categoria=Contact">Contacto</a></li>
+			 <li><a href="/Cuentas">Cuentas</a></li>
+			 <li><a href="/Mapas">Mapas</a></li>
+			 <li></li>
+    		</ul>
+<!-- / Top menu -->
+		</div>
+<!-- / Menu -->	
+
+<!-- LOGIN -->
+
+%if log==False:
+	% if reg==False:		
+			<div id="login">
+
+				<form method="POST"> 
+
+					${login.render()}
+					% if error==True:
+						<p style="text-decoration: blink;">Nombre o Pass erroneos<p>
+					
+					%endif
+					
+					% if error==False:
+						<p style="text-decoration: blink;">Entrar >></p>						
+					%endif
+				</form>
+
+
+						
+			</div>
+		 </div>
+	%endif
+
+
+%else:
+		
+		<div id="login">
+			<p id="saludo">Usuario: <em>${user}</em> <a id="cerrar" href="/cerrarsesion"><img src="/static/images/cerrar.png" WIDTH=70 HEIGHT=70 alt"cerrar sesion"/></a><p>
+
+		</div>
+
+
+	</div>
+	
+%endif
+
+
+
+<!-- / LOGIN -->
+
+
+<!--  CATEGORIA ACTUAL -->
+	% if cateA=='Categoria-0':
+		<h1>Principal</h1>
+	%else:
+		<h1>${cateA}</h1>
+	%endif
+
+<!--/  CATEGORIA ACTUAL -->
+
+<!-- Content -->	
+	 <div id="content">
+
+<!-- Post  -->	
+	% if reg==False and cateA!='Cuentas':
+	<%
+	p=len(losPosts)
+	%>
+		% for i in range (p):
+
+	    	<div class="post">
+
+			<h2>${losPosts[i].titulo}</h2>
+	      		<p><img class="left" src=${losPosts[i].imagen} alt="Lorem ipsum" title="Lorem ipsum" />${losPosts[i].texto1}</p>
+	      		<p class="box">${losPosts[i].textoResaltado}</p>
+	      		<p> ${losPosts[i].texto2} <a class="more" href="#">More &raquo;</a></p>
+
+	      		<div 
+	          		class="tool"><ul><li>${losPosts[i].fecha.dia}. ${losPosts[i].fecha.mes}. ${losPosts[i].fecha.agno}</li>
+	      	  		<li>From <a href="#">${losPosts[i].autor}</a></li><li>Category: <a href="#">Categoria 1</a></li></ul>
+	      		</div>
+
+	    	</div>
+
+		% endfor
+	% endif
+
+	% if reg==True:
+			<div class="post">
+				% if edit==True:
+					<h2>Editar</h2>
+				%else:
+					<h2>Registro</h2>
+	      			%endif
+	      		<form method="POST"> ${Registro.render()}</form>
+	      		
+	    		</div>	
+	% endif
+
+	% if cateA=='Cuentas':
+	<form method="POST"> ${fI.render()}</form>
+	<br><br>
+	<%
+	i=len(vtS)
+	%>
+		<input type="hidden" id=longiSerie name="variable" value=${i}>
+
+		% for a in range (i):
+				<%
+				iDa="myVarA"+str(a)
+				iDb="myVarB"+str(a)
+				%>
+
+
+			<input type="hidden" id=${iDa} name="variable" value=${vtS[a][0]}>
+			<input type="hidden" id=${iDb} name="variable" value=${vtS[a][1]}>
+		%endfor
+
+				
+				
+		    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+		    <script type='text/javascript'>
+
+		    var vectorSesionesA=new Array();
+		    var vectorSesionesB=new Array();
+		    var longi=document.getElementById("longiSerie").value;
+
+		    for (i = 0; i < longi; i++){
+			    var myVarA = document.getElementById("myVarA"+ i ).value;
+			    var myVarB = document.getElementById("myVarB"+ i ).value;
+
+			    vectorSesionesA.push(myVarA); 
+			    vectorSesionesB.push(myVarB);
+			  }
+
+		      google.load('visualization', '1', {packages:['table']});
+		      google.setOnLoadCallback(drawTable);
+		      function drawTable() {
+		        var data = new google.visualization.DataTable();
+		        data.addColumn('string', 'Name');
+		        data.addColumn('number', 'Ingreso');
+		        
+		        
+		         for (i = 0; i < longi; i++){
+		        data.addRows([
+
+		          
+		          [vectorSesionesA[i],   {v:parseInt(vectorSesionesB[i]),   f:  parseInt(vectorSesionesB[i])+ '€'}]
+		          
+		        
+		        ]);
+		    }
+
+
+		        var table = new google.visualization.Table(document.getElementById('table_div'));
+		        table.draw(data, {showRowNumber: true});
+		      }
+		    </script>
+
+		     <head>
+   
+    <script type="text/javascript">
+
+    		var vectorSesionesA=new Array();
+		    var vectorSesionesB=new Array();
+		    var longi=document.getElementById("longiSerie").value;
+
+		    for (i = 0; i < longi; i++){
+			    var myVarA = document.getElementById("myVarA"+ i ).value;
+			    var myVarB = document.getElementById("myVarB"+ i ).value;
+
+			    vectorSesionesA.push(myVarA); 
+			    vectorSesionesB.push(myVarB);
+			  }
+
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+      	var nombre=vectorSesionesA[0];
+      	var cantidad= parseInt(vectorSesionesB[0]);
+        var data = google.visualization.arrayToDataTable([
+          ['Persona', 'Ingreso'],
+          [nombre, cantidad]
+         
+        ]);
+
+        for (i = 1; i < longi; i++){
+        	var nombre=vectorSesionesA[i];
+      		var cantidad= parseInt(vectorSesionesB[i]);
+
+         data.addRows([
+
+		          
+		          [nombre, cantidad]
+		          
+		        
+		        ]);
+     }
+
+        var options = {
+          title: 'Ingresos'
+          
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  
+      
+  
+
+
+    <script type="text/javascript">
+
+    var vectorSesionesA=new Array();
+		    var vectorSesionesB=new Array();
+		    var longi=document.getElementById("longiSerie").value;
+
+		    for (i = 0; i < longi; i++){
+			    var myVarA = document.getElementById("myVarA"+ i ).value;
+			    var myVarB = document.getElementById("myVarB"+ i ).value;
+
+			    vectorSesionesA.push(myVarA); 
+			    vectorSesionesB.push(myVarB);
+			  }
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+      	var nombre=vectorSesionesA[0];
+      	var cantidad= parseInt(vectorSesionesB[0]);
+        var data = google.visualization.arrayToDataTable([
+          ['Nombre', 'Ingreso'],
+          [nombre, cantidad]
+        ]);
+
+         for (i = 1; i < longi; i++){
+        	var nombre=vectorSesionesA[i];
+      		var cantidad= parseInt(vectorSesionesB[i]);
+
+         data.addRows([
+
+		          
+		          [nombre, cantidad]
+		          
+		        
+		        ]);
+     }
+
+
+        var options = {
+          title: 'Ingresos'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+   
+
+
+
+
+
+
+		    <div id='table_div'></div>
+
+		    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+		     <div id="piechart" style="width: 900px; height: 500px;"></div>
+		
+  
+	%endif
+
+	% if cateA=='Mapas':
+
+	<h1>Mapa</h1>
+
+	<%
+	i=len(lTw)
+	%>
+		<input type="hidden" id=longiTwit name="variable" value=${i}>
+
+		% for a in range (i):
+				<%
+				iDTextoTweet= "myVarTxTweet"+str(a)
+				iDCoordenadaA="myVarCooA"+str(a)
+				iDCoordenadaB="myVarCoorB"+str(a)
+				%>
+
+
+			<input type="hidden" id=${iDTextoTweet}  name="variable" value=${lTw[a][0]}>
+			<input type="hidden" id=${iDCoordenadaA} name="variable" value=${lTw[a][1]}>
+			<input type="hidden" id=${iDCoordenadaB} name="variable" value=${lTw[a][2]}>
+
+
+		%endfor
+
+	
+    <meta charset="utf-8">
+    <title>Street View service</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+
+        	var vectorTextoTweet=new Array();
+		    var vectorCoordenadasA=new Array();
+		    var vectorCoordenadasB=new Array();
+		    var longi=document.getElementById("longiTwit").value;
+
+		    for (i = 0; i < longi; i++){
+			    var txTweet = document.getElementById("myVarTxTweet"+ i ).value;
+			    var CoorA = document.getElementById("myVarCooA"+ i ).value;
+			    var CoorB = document.getElementById("myVarCoorB"+ i ).value;
+
+			    vectorTextoTweet.push(txTweet); 
+			    vectorCoordenadasA.push(CoorA);
+			    vectorCoordenadasB.push(CoorB);
+
+			   // alert(CoorA);
+			    //alert(CoorB);
+			  }
+
+    var vectorPosiciones=new Array();
+	var fenway = new google.maps.LatLng(37.196286321795974, -3.6244541311950895);
+
+	for (i=0;i<longi;i++){
+	var pos = new google.maps.LatLng(parseFloat(vectorCoordenadasA[i]),parseFloat(vectorCoordenadasB[i]));
+	vectorPosiciones.push(pos)
+
+	}
+	
+	function initialize() {					
+	 	fenway;
+	  	var mapOptions = {
+	    center: fenway,
+	    zoom: 12
+  		};
+
+
+  		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+
+  		var vecMark = new Array();
+
+  		for (i=0; i<longi; i++){
+
+
+	  		var marker = new google.maps.Marker({
+	      	position: vectorPosiciones[i],
+	      	map: map,
+	      	title: vectorTextoTweet[i]
+	  		});
+
+	  	var contentString = vectorTextoTweet[i];
+
+        var infowindow = new google.maps.InfoWindow({
+      	content: contentString
+  		});
+
+	  		google.maps.event.addListener(marker, 'click', function() {
+    		infowindow.open(map,marker);
+  			});
+
+	  	}
+
+
+	  	var panoramaOptions = {
+		    position: fenway,
+		    pov: {
+		      heading: 34,
+		      pitch: 10
+		    }
+  		};
+
+
+	  	var panorama = new  google.maps.StreetViewPanorama(document.getElementById('pano'),panoramaOptions);
+	  	map.setStreetView(panorama);
+
+
+
+
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  
+    <div id="map-canvas" style="width: 400px; height: 300px"></div>
+   <div id="pano" style="width: 400px; height: 300px"></div> 
+  
+
+
+	%endif
+
+<!-- / Post -->	
+		</div>
+
+<!-- / Content -->		
+		
+<!-- Sidebar -->			
+	<div id="sidebar">
+		
+		 <h2>Menú</h2>
+		  <ul>
+
+		  	<%
+		  	 x=len(cate)
+		  	%>
+
+		  	% for a in range (x):
+		  		 <%
+		  		 enlace="/principal?categoria="+str(cate[a])
+		  		 %>
+    			 <li><a href=${enlace}>${cate[a]}</a></li>
+			% endfor
+
+			%if log==True:
+			<h3>Ultimas visitas:</h3>
+			
+			% for e in range (3):
+				<%
+				import re
+				tag=re.split(r'[=/]+', vLink[e])
+				etiq=tag[-1].upper()
+				%>
+
+				 %if vLink[e]!='':
+	   			 	<li><a href=${vLink[e]}>${etiq}</a></li>
+
+	   			 %endif	
+			% endfor
+			%endif
+					 <h3>RSS</h3>
+            <div class="templatemo_sb_box" id="RSS">
+                <span class="top"></span><span class="bottom"></span>
+
+                 <h6><a href="https://pbs.twimg.com/profile_images/1278654263/LOGO1.PNG"><img src="https://pbs.twimg.com/profile_images/1278654263/LOGO1.PNG" width="100" /></a>${rss.feed.title}</h6> 
+
+                <%
+                    if len(rss['entries'])>7:
+                        entradas=7
+                    else:
+                        entradas=len(rss['entries'])
+
+                %>
+
+                % for x in range(0,entradas): 
+                    <div class="news_box"><span class="nb_top"></span><span class="nb_bottom"></span>
+                        <a href="${rss.entries[x].link}">${rss.entries[x].title}</a>
+                    </div>
+                % endfor
+
+
+
+		</ul>
+
+
+
+
+
+
+	</div>
+
+<!-- / Sidebar -->	
+
+		<div class="clear"><!-- Espacio en blanco --></div>
+
+<!-- Footer -->
+	 <div id="footer-top"></div>
+	 <div id="footer">
+		<p>&copy; 2013 <a href="#">${autor}</a> 
+
+	 <!-- / DO NOT REMOVE  -->    
+	 <div id="licencia">
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_CO"><img alt="Licencia Creative Commons" 
+           style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />
+     </div>
+     Este obra está bajo una 
+           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_CO">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported</a>
+ <!-- / DO NOT REMOVE  -->    
+    </p>
+	 </div>  
+<!-- / Footer -->	
+  </div>
+<!-- / Wrapper -->	 
+ </body>
+
+</html>

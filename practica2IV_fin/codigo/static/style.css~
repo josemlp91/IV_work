@@ -1,0 +1,392 @@
+
+/* 
+ CSS style of Cartem - free template 
+ Created by www.cleanet.cz
+ Version 1.1 (update 7. 11. 2010)
+*/
+
+
+/* Main settings */
+
+body {
+ margin: 0;
+ padding: 0;
+ background: #fff url(images/bg.gif) 0 0 repeat-x;
+ font-family: Arial, Verdana, Tahoma;
+ font-size: 12px;
+ color: #444;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+.clear {
+ clear: both;
+}
+
+h1, h2, h3 {
+ font-weight: normal;
+ color: #2c902b;       
+}
+
+p, ol, ul {
+ line-height: 200%;
+}
+
+a { 
+ color: #2c902b;
+ text-decoration: underline;
+}
+
+a:hover {
+ text-decoration: none; 
+}
+
+img {
+ border: none;
+}
+
+img.left {
+ float: left;
+ padding: 5px 20px 5px 0;
+}
+
+img.right {
+ float: right;
+ padding: 5px 0 5px 20px;
+}
+
+/* Wrapper */
+
+#wrapper {
+ width: 960px;
+ margin: 0 auto;
+}
+
+/* Logo */
+
+#logo {
+ height: 65px;
+ width: 920px;
+ margin: 0 auto;
+ padding: 15px 0 0 0;
+}
+
+#logo h1, #logo h1 a {
+ color: #fff;
+ text-decoration: none;
+ float: left;
+ font-size: 33px;
+  
+}
+
+#logo p {
+ color: #edf7e9;
+ font-size: 18px;
+ float: left;
+ height: 46px;
+ line-height: 46px;
+ padding: 0 5px 0 10px;
+ margin: 0 0 0 5px;
+ background: url(images/separator.gif) left center no-repeat;
+}
+
+#logo ul {
+ float: right;
+ padding: 15px 0 0 0;
+}
+
+#logo ul li {
+ display: inline;
+ list-style: none;
+ font-size: 13px;   
+ padding: 0 10px;  
+ border-right: 1px solid #5cb53c;
+}
+
+#logo ul li a {
+ color: #f4fdf2;
+}
+
+#logo ul li.active a {
+ color: #fff;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+/* Sub-header */
+
+#subheader {
+ height: 100px;
+ margin: 0 0 20px 0;
+}
+
+/* Menu */
+
+#menu {
+ float: left;
+ height: 40px;
+ padding: 0 20px;
+}
+
+#menu li {
+ display: block;
+ float: left;
+}
+
+#menu li.active, #menu li:hover {
+ display: block;
+ float: left;
+ background: url(images/active.gif) 0 0 repeat-x;
+}
+
+#menu li a {
+ display: block;
+ float: left;
+ height: 40px;
+ line-height: 40px;
+ border-left: 1px solid #53a82a;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff;
+ padding: 0 20px;
+}
+
+#menu li a:hover, #menu li.active a {
+ text-decoration: underline;
+}
+
+
+#licencia {
+
+position:relative;
+left: 350px;
+
+
+
+}
+/* Login form */
+
+#login {
+ float: right;
+ width: 255px;
+ background: #2C902B;
+ border-radius: 15px 15px 15px 15px;
+opacity=0.2;
+ background: url(images/active.gif) 0 0 repeat-x repeat-y;
+
+
+}
+
+#login form {
+ float: right;
+ margin: 0;
+ padding: 8px 0 0 0;
+}
+
+#login fieldset {
+ margin: 0;
+ padding: 0;
+ border: none;
+}
+
+#login input {
+ float: left;
+ border: none;
+}
+
+#login-text {
+ width: 170px;
+ height: 24px;
+ border: none;
+ background: #A9A9A9;
+ color: #111;
+ text-indent: 10px;
+float: left;
+}
+
+#login-pass {
+ width: 170px;
+ height: 24px;
+ border: none;
+ background: #A9A9A9;
+ color: #111;
+ text-indent: 10px;
+float: left;
+}
+
+#login-submit {
+ text-indent: 7px;
+ height: 24px;
+ width: 45px;
+ padding: 0px 5px;
+ background: #A9A9A9;
+ color: #fff;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 12px;
+ float: left;
+}
+
+/* Content */
+
+#content {
+ float: right;
+ width: 670px;
+ padding: 10px 0;
+}
+
+#content .post {
+ margin: 0 0 30px 0;
+}
+
+#content .post p.box {
+ background: #fef5be;
+ border-top: 1px solid #fdd425;
+ border-bottom: 1px solid #fdd425;
+ width: 610px;
+ margin: 20px 10px;
+ padding: 10px 20px;
+}
+
+#content .post .tool {
+ background: url(images/tool.gif) left top repeat-x;
+ width: 630px;
+ margin: 20px 10px 30px 10px;
+ padding: 0 10px;
+}
+
+#content .post .tool ul {
+ height: 40px;
+ line-height: 40px;
+ text-align: right;
+ border: none;
+ color: #bbb;
+}
+
+#content .post .tool ul li {
+ display: inline;
+ background: none;
+ padding: 0 10px;
+ color: #666;
+ font-size: 11px;
+ background: url(images/content-separator.gif) left center no-repeat;
+}
+
+#content .post a.more {
+ border-bottom: 1px dotted #2c902b;
+ text-decoration: none;
+ padding: 4px;
+ margin: 0 4px;
+ font-weight: bold;
+}
+
+#content .post a.more:hover {
+ background: #2c902b;
+ text-decoration: none;
+ color: #fff;
+}
+
+#content h2, #content h3 {
+ font-size: 20px;
+ background: url(images/tool.gif) left top repeat-x;
+ padding: 20px;
+}
+
+#content h3 {
+ font-size: 18px;
+}
+
+#content p {
+ line-height: 28px; 
+ padding: 0 10px;
+}
+
+#content ul {
+ padding: 0 20px;
+ margin: 20px 0 20px 20px;
+ color: #333;
+ border-left: 1px solid #eee;
+}
+
+#content ul li {
+ list-style: none;
+ background: url(images/list.gif) left center no-repeat;
+ padding: 0 0 0 16px;
+ line-height: 36px;
+}
+
+/* Sidebar */
+
+#sidebar {
+ float: left;
+ width: 240px;
+ padding: 10px 20px;
+}
+
+#sidebar ul, #sidebar p {
+ margin: 10px 0 30px 0;
+ padding: 0 10px;
+ color: #666;
+ line-height: 28px;
+}
+
+#sidebar ul li {
+ list-style: none;
+ background: url(images/list.gif) left center no-repeat;
+ padding: 0 0 3px 16px;
+ margin: 0 0 3px 0;  
+ border-bottom: 1px dashed #eee;
+ line-height: 32px;
+}
+
+#sidebar ul li:hover {
+ border-bottom: 1px dashed #ddd;
+}
+
+#sidebar ul li a {
+ color: #444;
+ text-decoration: none;
+}
+
+#sidebar h2, #sidebar h3 {
+ font-size:18px;
+ background: url(images/tool.gif) left top repeat-x;
+ padding: 20px;
+}
+
+/* Footer */
+
+#footer-top {
+ height: 13px;
+ width: 920px;
+ margin: 0 auto;
+ background: url(images/footer.gif) 0 0 no-repeat;
+ _position: relative;   /* For IE6 */
+ _top: 2px;
+ _left: 0;
+}
+
+#footer {
+ margin: 0 auto;
+ width: 880px;
+ padding: 0 20px 13px 20px;
+ background: #eee; 
+}
+
+#footer p {
+ color: #444; 
+}
+
+#footer span {
+ float: right;  
+ color: #777; 
+}
+
+#footer span a {
+ color: #666; 
+}

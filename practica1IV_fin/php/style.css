@@ -1,0 +1,116 @@
+/*
+  Esta archivo pertenece a la aplicación "foroivirtuales2" bajo licencia GPLv2.
+  Copyright (C) 2013 José Miguel López Pérez.
+
+  Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los términos 
+  de la Licencia Pública General de GNU según es publicada por la Free Software Foundation, 
+  bien de la versión 2 de dicha Licencia o bien (según su elección) de cualquier versión 
+  posterior.
+
+  Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, 
+  incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN 
+  PROPÓSITO PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
+
+  Debería haber recibido una copia de la Licencia Pública General junto con este programa. 
+  Si no ha sido así, escriba a la Free Software Foundation, Inc., en 675 Mass Ave, Cambridge, 
+  MA 02139, EEUU.
+*/
+
+h1.dropcap span {
+  font-size: 80px;
+  font-weight: lighter;
+  position: relative;
+  float: left;
+  line-height: 50px;
+  color: #000;
+}
+#dropcap p {
+  font-family: georgia, "times new roman", times, serif;
+  font-size: 1.9em; 
+  color: #000;
+  line-height: 1.4;
+}
+
+h1.dropcap {
+  font-size: 40px;
+  font-family: arial, verdana, sans-serif;
+  color: #000;
+  line-height: 28px;
+}
+
+
+body {
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #EBE8EF; 
+     border-color: #aaaaaa;
+   border-width: 1px;
+   border-style: solid;}
+
+table {
+ *border-collapse: collapse; /* IE7 and lower */
+ border-spacing: 0;
+ width: 100%;
+ }
+
+.a{
+
+
+}
+
+
+.bordered  {
+ background-color: #dce9f9;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+ background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+ background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+ background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+ background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+ background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+ -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+ -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+ box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+ border-top: none;
+ text-shadow: 0 1px 0 rgba(255,255,255,.5);
+ }
+ 
+
+.bordered tr:hover {
+ background: #fbf8e9;
+ -o-transition: all 0.1s ease-in-out;
+ -webkit-transition: all 0.1s ease-in-out;
+ -moz-transition: all 0.1s ease-in-out;
+ -ms-transition: all 0.1s ease-in-out;
+ transition: all 0.1s ease-in-out;
+ }
+
+.highlight
+ {
+ background: #fbf8e9;
+ -o-transition: all 0.1s ease-in-out;
+ -webkit-transition: all 0.1s ease-in-out;
+ -moz-transition: all 0.1s ease-in-out;
+ -ms-transition: all 0.1s ease-in-out;
+ transition: all 0.1s ease-in-out;
+ }
+
+#boton1{ 
+background:-moz-linear-gradient(#fc0 0%,#F60 100%); 
+background:-ms-linear-gradient(#fc0 0%,#F60 100%);
+background:-o-linear-gradient(#fc0 0%,#F60 100%); 
+background:-webkit-linear-gradient(#fc0 0%,#F60 100%);
+background:linear-gradient(#fc0 0%,#F60 100%);
+border:solid 1px #DEDEDE; 
+border-radius:5px;
+text-align:center;
+padding:5px; 
+color:#fff;
+  width:75px;
+} 
+#boton1:hover{
+background:-moz-linear-gradient(#fff 0%,#DEDEDE 100%);
+color:#999; 
+}
+
+

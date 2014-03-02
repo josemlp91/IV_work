@@ -1,0 +1,116 @@
+<!--
+  Esta archivo pertenece a la aplicación "foroivirtuales2" bajo licencia GPLv2.
+  Copyright (C) 2013 José Miguel López Pérez.
+
+  Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los términos 
+  de la Licencia Pública General de GNU según es publicada por la Free Software Foundation, 
+  bien de la versión 2 de dicha Licencia o bien (según su elección) de cualquier versión 
+  posterior.
+
+  Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, 
+  incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN 
+  PROPÓSITO PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
+
+  Debería haber recibido una copia de la Licencia Pública General junto con este programa. 
+  Si no ha sido así, escriba a la Free Software Foundation, Inc., en 675 Mass Ave, Cambridge, 
+  MA 02139, EEUU.
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+ 	<meta name="author" content="José Miguel López Pérez">
+  	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link type="text/css" rel="stylesheet" href="style.css"/>
+
+<body>
+
+
+	<div id="dropcap">
+
+
+	 <h1 class="dropcap"><span>H</span>ablando claro</h1>
+
+	<p>El foro de Infraestructuras Virtuales</p>
+
+
+
+	</div>
+
+	<a href="http://openclipart.org/people/averpix/generic-game-desktop.svg"><img src="http://openclipart.org/people/averpix/generic-game-desktop.svg" aling="right" alt=PUBLICIDAD width="20%" height="30%" ></img></a>
+
+
+
+	<div id="boton1">
+	<a href="formulario.php?respuestas=0" title="Boton nuevo">
+	Nuevo Tema
+	</a>
+	</div>
+
+	<br>
+	<br>
+
+
+	<?php echo'<strong><table width="100%" class="texto">
+	  <tr>
+	    <td width="5%">&nbsp;</td>
+	    <td width="30%">Titulo</td>
+	    <td width="30%">Fecha</td>
+	    <td width="30%">Respuestas</td>
+	  </tr>
+	</table></strong>'; 
+
+	?>
+
+
+	<?php 
+
+	$user= getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+	$clave= getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+	$h=getenv('OPENSHIFT_MYSQL_DB_HOST');
+	$db=getenv('OPENSHIFT_APP_NAME');
+	$puerto=getenv('OPENSHIFT_MYSQL_DB_PORT');
+
+	  $host = 'mysql:host='.$h.';port:'.$puerto.';dbname='.$db;
+	  $conexion = new PDO( $host, $user, $clave );
+	  $consulta = "SELECT * FROM `foroivirtuales2` . `foro1`";
+			
+		echo"<hr size=10 color=ffffff width =100% align= left />";
+	
+		foreach ($conexion->query($consulta) as $row) {
+	
+			$titulo=$row['titulo'];
+			$id=$row['id'];
+			$fecha=$row['fecha'];
+			$respuestas=$row['respuestas'];
+			echo("<table class=\"bordered\" width='100%' cellspacing='0' cellpading='0'>\n");
+			echo ("<tr>\n");
+			echo("<td  width='5%'><a class='a' href='foro.php?id=$id'>Ver</a></td>\n");
+			echo("<td width='30%'>$titulo</td>\n");
+			echo("<td width='30%'>".date("d-m-y",$fecha)."</td>\n");
+			echo("<td width='30%'>$respuestas</td>\n");
+			echo("</tr>\n");
+			echo("</table>\n");
+			echo"<hr>";
+
+		} 
+	?>
+
+
+	
+	</div>
+<body>
+
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	 <script type="text/javascript">
+	 $(document).ready(function() {
+	 $('.bordered tr').mouseover(function(){
+	 $(this).addClass('highlight');
+	 }).mouseout(function(){
+	 $(this).removeClass('highlight');
+	 });
+	 });
+
+
+</html>
